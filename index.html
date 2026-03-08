@@ -540,6 +540,66 @@
                 transform: translateY(0);
             }
         }
+
+        /* Final Slide Styles */
+        .final-slide .slide-content {
+            align-items: center;
+            text-align: center;
+        }
+
+        .final-logo {
+            width: clamp(100px, 15vw, 180px);
+            height: auto;
+            margin-bottom: 2rem;
+            border-radius: 2rem;
+            border: none;
+            box-shadow: none;
+        }
+
+        .final-slide h2 {
+            font-size: var(--h2-size);
+            font-weight: 900;
+            margin-bottom: 2.5rem;
+            max-width: 100%;
+        }
+
+        .final-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .final-link {
+            font-size: 1rem;
+            color: var(--brand-salmon);
+            text-decoration: none;
+            font-weight: 800;
+            padding: 0.7rem 1.4rem;
+            background: rgba(255, 92, 69, 0.1);
+            border: 1px solid var(--brand-salmon);
+            border-radius: 0.8rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .final-link:hover {
+            background: var(--brand-salmon);
+            color: var(--brand-navy);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: var(--glow);
+        }
+
+        .final-email {
+            font-size: var(--body-size);
+            color: var(--text-primary);
+            opacity: 0.6;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .final-email:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -942,6 +1002,21 @@
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
                         class="footer-text" alt="Salmon">
                 </div>
+            </div>
+        </section>
+
+        <section class="slide final-slide" id="slide-14">
+            <div class="slide-content">
+                <img src="https://avatars.githubusercontent.com/u/100874508?v=4" class="final-logo reveal"
+                    alt="Salmon Logo">
+                <h2 class="reveal">In Salmon we trust</h2>
+                <div class="final-links reveal">
+                    <a href="https://salmonwallet.io" target="_blank" class="final-link">Get Salmon →</a>
+                    <a href="mailto:hello@salmonwallet.io" class="final-email">hello@salmonwallet.io</a>
+                </div>
+                <p class="reveal"
+                    style="margin-top: 4rem; opacity: 0.4; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;">
+                    Thanks</p>
             </div>
         </section>
     </div>
