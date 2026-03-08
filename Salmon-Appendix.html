@@ -55,29 +55,40 @@
         html,
         body {
             height: 100%;
+            width: 100%;
             margin: 0;
+            padding: 0;
             overflow: hidden;
             background: var(--bg-primary);
             color: var(--text-primary);
             font-family: var(--font-body);
             -webkit-font-smoothing: antialiased;
+            user-select: none;
         }
 
-        html {
+        #presentation-wrapper {
+            height: 100%;
+            width: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
             scroll-snap-type: y mandatory;
-            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+            position: relative;
+            z-index: 1;
         }
 
         .slide {
-            width: 100vw;
-            height: 100vh;
-            height: 100dvh;
-            overflow: hidden;
-            scroll-snap-align: start;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
             display: flex;
             flex-direction: column;
             position: relative;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
             background: var(--bg-gradient);
+            overflow: hidden;
         }
 
         .slide-content {
@@ -296,8 +307,30 @@
         }
 
         .back-link:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 2);
             color: var(--brand-salmon);
+        }
+
+        @media (max-width: 768px) {
+            .back-link {
+                top: 1.5rem;
+                right: 1.2rem;
+                bottom: auto;
+                left: auto;
+                padding: 0.4rem 0.7rem;
+                font-size: 0.8rem;
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                text-align: center;
+                backdrop-filter: blur(10px);
+                border-radius: 0.4rem;
+                width: auto;
+                max-width: 120px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
         }
 
         .slide-accent {
@@ -371,218 +404,225 @@
     <nav class="nav-dots"></nav>
     <a href="index.html" class="back-link">← Back to Deck</a>
 
-    <!-- Slide A1: Modular Architecture -->
-    <section class="slide active" id="slide-1">
-        <div class="slide-number">A1</div>
-        <div class="slide-accent A-accent-1">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <rect x="40" y="40" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
-                    stroke-width="2" />
-                <rect x="40" y="85" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
-                    stroke-width="2" />
-                <rect x="40" y="130" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
-                    stroke-width="2" />
-                <path d="M100,70 V85 M100,115 V130" stroke="var(--brand-salmon)" stroke-width="2" />
-            </svg>
-        </div>
-        <div class="slide-content">
-            <h2 class="reveal">Salmon Uses a Modular Wallet Architecture</h2>
-            <ul class="bullet-list">
-                <li class="reveal">Modular wallet architecture</li>
-                <li class="reveal">Key management and signing layer</li>
-                <li class="reveal">Chain modules (Solana, Bitcoin, others)</li>
-                <li class="reveal">Application integration interface</li>
-                <li class="reveal">RPC and backend infrastructure</li>
-            </ul>
-            <div class="slide-footer">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
-                    class="footer-icon" alt="Icon">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
-                    class="footer-text" alt="Salmon">
-            </div>
-        </div>
-    </section>
+    <div id="presentation-wrapper">
 
-    <!-- Slide A2: Security -->
-    <section class="slide" id="slide-2">
-        <div class="slide-number">A2</div>
-        <div class="slide-accent A-accent-2">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="80" fill="none" stroke="var(--brand-salmon)" stroke-width="1" />
-                <circle cx="100" cy="100" r="60" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5"
-                    stroke-dasharray="5 5" />
-                <circle cx="100" cy="100" r="40" fill="none" stroke="var(--brand-salmon)" stroke-width="2" />
-                <path d="M100,85 V115 M85,100 H115" stroke="var(--brand-salmon)" stroke-width="2" />
-            </svg>
-        </div>
-        <div class="slide-content">
-            <h2 class="reveal">Security Is Designed as an Adversarial Open System</h2>
-            <ul class="bullet-list">
-                <li class="reveal">Security designed for adversarial environments</li>
-                <li class="reveal">Open‑source code review</li>
-                <li class="reveal">Continuous testing and audits</li>
-                <li class="reveal">Verifiable signing behavior</li>
-                <li class="reveal">Community vulnerability detection</li>
-            </ul>
-            <div class="slide-footer">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
-                    class="footer-icon" alt="Icon">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
-                    class="footer-text" alt="Salmon">
+        <!-- Slide A1: Modular Architecture -->
+        <section class="slide active" id="slide-1">
+            <div class="slide-number">A1</div>
+            <div class="slide-accent A-accent-1">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="40" y="40" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
+                        stroke-width="2" />
+                    <rect x="40" y="85" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
+                        stroke-width="2" />
+                    <rect x="40" y="130" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
+                        stroke-width="2" />
+                    <path d="M100,70 V85 M100,115 V130" stroke="var(--brand-salmon)" stroke-width="2" />
+                </svg>
             </div>
-        </div>
-    </section>
-
-    <!-- Slide A3: Progress -->
-    <section class="slide" id="slide-3">
-        <div class="slide-number">A3</div>
-        <div class="slide-accent A-accent-3">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <rect x="30" y="50" width="140" height="100" fill="none" stroke="var(--brand-salmon)"
-                    stroke-width="1.5" />
-                <path d="M40,130 L60,100 L80,110 L110,70 L140,80 L160,50" fill="none" stroke="var(--brand-salmon)"
-                    stroke-width="2" />
-                <path d="M30,80 H170 M30,110 H170" stroke="var(--brand-salmon)" stroke-width="0.5" opacity="0.3" />
-            </svg>
-        </div>
-        <div class="slide-content">
-            <h2 class="reveal">Progress Is Measured Through Observable Outcomes</h2>
-            <ul class="bullet-list">
-                <li class="reveal">Outcomes guide progress as adoption grows</li>
-                <li class="reveal">Active users</li>
-                <li class="reveal">On‑chain transactions</li>
-                <li class="reveal">Ecosystem integrations</li>
-                <li class="reveal">Reliability metrics</li>
-                <li class="reveal">Developer contributions</li>
-            </ul>
-            <div class="slide-footer">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
-                    class="footer-icon" alt="Icon">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
-                    class="footer-text" alt="Salmon">
-            </div>
-        </div>
-    </section>
-
-    <!-- Slide A4: Governance -->
-    <section class="slide" id="slide-4">
-        <div class="slide-number">A4</div>
-        <div class="slide-accent A-accent-4">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path d="M100,40 L160,80 L140,150 L60,150 L40,80 Z" fill="none" stroke="var(--brand-salmon)"
-                    stroke-width="2" />
-                <circle cx="100" cy="40" r="5" fill="var(--brand-salmon)" />
-                <circle cx="160" cy="80" r="5" fill="var(--brand-salmon)" />
-                <circle cx="140" cy="150" r="5" fill="var(--brand-salmon)" />
-                <circle cx="60" cy="150" r="5" fill="var(--brand-salmon)" />
-                <circle cx="40" cy="80" r="5" fill="var(--brand-salmon)" />
-                <path d="M100,40 L140,150 M100,40 L60,150 M160,80 L40,80 M160,80 L60,150" stroke="var(--brand-salmon)"
-                    stroke-width="0.5" opacity="0.4" />
-            </svg>
-        </div>
-        <div class="slide-content">
-            <h2 class="reveal">Open Source Governance Defines Ownership of the Project</h2>
-            <ul class="bullet-list">
-                <li class="reveal">Open governance structure</li>
-                <li class="reveal">Public repository ownership</li>
-                <li class="reveal">Transparent contribution process</li>
-                <li class="reveal">Public development roadmap</li>
-                <li class="reveal">Open ecosystem participation</li>
-            </ul>
-            <div class="slide-footer">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
-                    class="footer-icon" alt="Icon">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
-                    class="footer-text" alt="Salmon">
-            </div>
-        </div>
-    </section>
-
-    <!-- Slide A5: Team -->
-    <section class="slide" id="slide-5">
-        <div class="slide-number">A5</div>
-        <div class="slide-accent A-accent-5">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="70" cy="70" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
-                <circle cx="130" cy="70" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
-                <circle cx="70" cy="130" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
-                <circle cx="130" cy="130" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
-                <path d="M70,70 L130,70 L130,130 L70,130 Z" fill="none" stroke="var(--brand-salmon)" stroke-width="0.5"
-                    stroke-dasharray="2 2" />
-            </svg>
-        </div>
-        <div class="slide-content">
-            <h2 class="reveal">Core Contributors Build and Maintain Salmon</h2>
-            <div class="bullet-list"
-                style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1000px;">
-                <div class="reveal">
-                    <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Nacho Mileo</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Product & Strategy. Leads overall
-                        product vision and execution for Salmon.</p>
-                </div>
-                <div class="reveal">
-                    <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Angel Mazzarello</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Operations & Finance. Serial
-                        entrepreneur, leads strategy and ecosystem growth.</p>
-                </div>
-                <div class="reveal">
-                    <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Dario Santos</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Technology. Leads technical
-                        architecture and security design.</p>
-                </div>
-                <div class="reveal">
-                    <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Rodrigo Menendez</h3>
-                    <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Legal. Oversees regulatory strategy
-                        and governance frameworks.</p>
+            <div class="slide-content">
+                <h2 class="reveal">Salmon Uses a Modular Wallet Architecture</h2>
+                <ul class="bullet-list">
+                    <li class="reveal">Key management and signing layer</li>
+                    <li class="reveal">Chain modules (Solana, Bitcoin, others)</li>
+                    <li class="reveal">Application integration interface</li>
+                    <li class="reveal">RPC and backend infrastructure</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
                 </div>
             </div>
-            <div class="slide-footer">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
-                    class="footer-icon" alt="Icon">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
-                    class="footer-text" alt="Salmon">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Slide A6: Why Now -->
-    <section class="slide" id="slide-6">
-        <div class="slide-number">A6</div>
-        <div class="slide-accent A-accent-6">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20,150 H180 M20,130 H180 M20,110 H180" stroke="var(--brand-salmon)" stroke-width="1"
-                    opacity="0.4" />
-                <path d="M100,20 Q150,20 150,80 T100,140 T50,80 T100,20" fill="none" stroke="var(--brand-salmon)"
-                    stroke-width="2" />
-                <circle cx="100" cy="80" r="10" fill="var(--brand-salmon)" />
-            </svg>
-        </div>
-        <div class="slide-content">
-            <h2 class="reveal">Why the Time Is Right for an Open Wallet Alternative</h2>
-            <ul class="bullet-list">
-                <li class="reveal">Wallets becoming the primary crypto interface</li>
-                <li class="reveal">Most wallets controlled by private companies</li>
-                <li class="reveal">Limited transparency around integrations and fees</li>
-                <li class="reveal">Rising demand for verifiable open infrastructure</li>
-                <li class="reveal">Multi‑chain ecosystems and DeFi expanding</li>
-                <li class="reveal">Salmon positioned to scale as adoption grows</li>
-            </ul>
-            <div class="slide-footer">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
-                    class="footer-icon" alt="Icon">
-                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
-                    class="footer-text" alt="Salmon">
+        <!-- Slide A2: Security -->
+        <section class="slide" id="slide-2">
+            <div class="slide-number">A2</div>
+            <div class="slide-accent A-accent-2">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="var(--brand-salmon)" stroke-width="1" />
+                    <circle cx="100" cy="100" r="60" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5"
+                        stroke-dasharray="5 5" />
+                    <circle cx="100" cy="100" r="40" fill="none" stroke="var(--brand-salmon)" stroke-width="2" />
+                    <path d="M100,85 V115 M85,100 H115" stroke="var(--brand-salmon)" stroke-width="2" />
+                </svg>
             </div>
-        </div>
-    </section>
+            <div class="slide-content">
+                <h2 class="reveal">Security Is Designed as an Adversarial Open System</h2>
+                <ul class="bullet-list">
+                    <li class="reveal">Open‑source code review</li>
+                    <li class="reveal">Continuous testing and audits</li>
+                    <li class="reveal">Verifiable signing behavior</li>
+                    <li class="reveal">Community vulnerability detection</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide A3: Progress -->
+        <section class="slide" id="slide-3">
+            <div class="slide-number">A3</div>
+            <div class="slide-accent A-accent-3">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="30" y="50" width="140" height="100" fill="none" stroke="var(--brand-salmon)"
+                        stroke-width="1.5" />
+                    <path d="M40,130 L60,100 L80,110 L110,70 L140,80 L160,50" fill="none" stroke="var(--brand-salmon)"
+                        stroke-width="2" />
+                    <path d="M30,80 H170 M30,110 H170" stroke="var(--brand-salmon)" stroke-width="0.5" opacity="0.3" />
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">Progress Is Measured Through Observable Outcomes</h2>
+                <ul class="bullet-list">
+                    <li class="reveal">Outcomes guide progress as adoption grows</li>
+                    <li class="reveal">Active users</li>
+                    <li class="reveal">On‑chain transactions</li>
+                    <li class="reveal">Ecosystem integrations</li>
+                    <li class="reveal">Reliability metrics</li>
+                    <li class="reveal">Developer contributions</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide A4: Governance -->
+        <section class="slide" id="slide-4">
+            <div class="slide-number">A4</div>
+            <div class="slide-accent A-accent-4">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100,40 L160,80 L140,150 L60,150 L40,80 Z" fill="none" stroke="var(--brand-salmon)"
+                        stroke-width="2" />
+                    <circle cx="100" cy="40" r="5" fill="var(--brand-salmon)" />
+                    <circle cx="160" cy="80" r="5" fill="var(--brand-salmon)" />
+                    <circle cx="140" cy="150" r="5" fill="var(--brand-salmon)" />
+                    <circle cx="60" cy="150" r="5" fill="var(--brand-salmon)" />
+                    <circle cx="40" cy="80" r="5" fill="var(--brand-salmon)" />
+                    <path d="M100,40 L140,150 M100,40 L60,150 M160,80 L40,80 M160,80 L60,150"
+                        stroke="var(--brand-salmon)" stroke-width="0.5" opacity="0.4" />
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">Open Source Governance Defines Ownership of the Project</h2>
+                <ul class="bullet-list">
+                    <li class="reveal">Open governance structure</li>
+                    <li class="reveal">Public repository ownership</li>
+                    <li class="reveal">Transparent contribution process</li>
+                    <li class="reveal">Public development roadmap</li>
+                    <li class="reveal">Open ecosystem participation</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide A5: Team -->
+        <section class="slide" id="slide-5">
+            <div class="slide-number">A5</div>
+            <div class="slide-accent A-accent-5">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="70" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
+                    <circle cx="130" cy="70" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
+                    <circle cx="70" cy="130" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
+                    <circle cx="130" cy="130" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
+                    <path d="M70,70 L130,70 L130,130 L70,130 Z" fill="none" stroke="var(--brand-salmon)"
+                        stroke-width="0.5" stroke-dasharray="2 2" />
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">Core Contributors Build and Maintain Salmon</h2>
+                <div class="bullet-list"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1000px;">
+                    <div class="reveal">
+                        <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Nacho Mileo</h3>
+                        <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Product & Strategy. Leads
+                            overall
+                            product vision and execution for Salmon.</p>
+                    </div>
+                    <div class="reveal">
+                        <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Angel Mazzarello</h3>
+                        <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Operations & Finance. Serial
+                            entrepreneur, leads strategy and ecosystem growth.</p>
+                    </div>
+                    <div class="reveal">
+                        <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Dario Santos</h3>
+                        <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Technology. Leads technical
+                            architecture and security design.</p>
+                    </div>
+                    <div class="reveal">
+                        <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Rodrigo Menendez</h3>
+                        <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Legal. Oversees regulatory
+                            strategy
+                            and governance frameworks.</p>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide A6: Why Now -->
+        <section class="slide" id="slide-6">
+            <div class="slide-number">A6</div>
+            <div class="slide-accent A-accent-6">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,150 H180 M20,130 H180 M20,110 H180" stroke="var(--brand-salmon)" stroke-width="1"
+                        opacity="0.4" />
+                    <path d="M100,20 Q150,20 150,80 T100,140 T50,80 T100,20" fill="none" stroke="var(--brand-salmon)"
+                        stroke-width="2" />
+                    <circle cx="100" cy="80" r="10" fill="var(--brand-salmon)" />
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">Why the Time Is Right for an Open Wallet Alternative</h2>
+                <ul class="bullet-list">
+                    <li class="reveal">Wallets becoming the primary crypto interface</li>
+                    <li class="reveal">Most wallets controlled by private companies</li>
+                    <li class="reveal">Limited transparency around integrations and fees</li>
+                    <li class="reveal">Rising demand for verifiable open infrastructure</li>
+                    <li class="reveal">Multi‑chain ecosystems and DeFi expanding</li>
+                    <li class="reveal">Salmon positioned to scale as adoption grows</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script>
         class SlidePresentation {
             constructor() {
+                this.wrapper = document.getElementById('presentation-wrapper');
                 this.slides = document.querySelectorAll('.slide');
                 this.progressBar = document.querySelector('.progress-bar');
                 this.navDots = document.querySelector('.nav-dots');
                 this.currentIdx = 0;
+                this.isScrolling = false;
+                this.touchStartX = 0;
+                this.touchStartY = 0;
                 this.init();
             }
 
@@ -600,8 +640,12 @@
                     if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') this.prevSlide();
                 });
 
-                window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
+                this.wrapper.addEventListener('scroll', () => this.handleScroll(), { passive: true });
                 window.addEventListener('resize', () => this.handleScroll());
+
+                // Touch & Click Nav for mobile
+                this.initTouch();
+                document.addEventListener('click', (e) => this.handleClick(e));
 
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
@@ -617,8 +661,15 @@
             }
 
             scrollToSlide(index) {
-                if (index < 0 || index >= this.slides.length) return;
+                if (index < 0 || index >= this.slides.length || this.isScrolling) return;
+
+                this.isScrolling = true;
+                this.updateNav(index); // Update state immediately
                 this.slides[index].scrollIntoView({ behavior: 'smooth' });
+
+                setTimeout(() => {
+                    this.isScrolling = false;
+                }, 800);
             }
 
             nextSlide() { this.scrollToSlide(this.currentIdx + 1); }
@@ -633,11 +684,52 @@
             }
 
             handleScroll() {
-                const scrollPos = window.scrollY;
-                const windowHeight = window.innerHeight;
+                if (this.isScrolling) return;
+                const scrollPos = this.wrapper.scrollTop;
+                const windowHeight = this.wrapper.clientHeight;
                 const idx = Math.round(scrollPos / windowHeight);
-                if (idx !== this.currentIdx) {
+                if (idx !== this.currentIdx && !isNaN(idx)) {
                     this.updateNav(idx);
+                }
+            }
+
+            initTouch() {
+                this.wrapper.addEventListener('touchstart', (e) => {
+                    this.touchStartX = e.changedTouches[0].screenX;
+                    this.touchStartY = e.changedTouches[0].screenY;
+                }, { passive: true });
+
+                this.wrapper.addEventListener('touchend', (e) => {
+                    const touchEndX = e.changedTouches[0].screenX;
+                    const touchEndY = e.changedTouches[0].screenY;
+                    this.handleGesture(touchEndX, touchEndY);
+                }, { passive: true });
+            }
+
+            handleGesture(endX, endY) {
+                const diffX = this.touchStartX - endX;
+                const diffY = this.touchStartY - endY;
+
+                if (Math.abs(diffY) > 50 && Math.abs(diffY) > Math.abs(diffX)) {
+                    if (diffY > 0) this.nextSlide();
+                    else this.prevSlide();
+                }
+            }
+
+            handleClick(e) {
+                const target = e.target;
+                if (
+                    target.closest('a') ||
+                    target.closest('button') ||
+                    target.closest('.dot') ||
+                    target.closest('.nav-dots')
+                ) return;
+
+                const width = window.innerWidth;
+                if (e.clientX > width * 0.3) {
+                    this.nextSlide();
+                } else {
+                    this.prevSlide();
                 }
             }
         }
