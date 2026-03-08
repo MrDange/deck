@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salmon Wallet — Appendix</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===========================================
+           CSS CUSTOM PROPERTIES (THEME: SALMON)
+           =========================================== */
+        :root {
+            /* Brand Colors */
+            --brand-salmon: #FF5C45;
+            --brand-red: #E72A2A;
+            --brand-navy: #10131c;
+            /* Darker orange than FF5722 */
+            --bg-primary: #3d150b;
+            --bg-gradient: radial-gradient(circle at 50% 50%, #7c2d1b 0%, #3d150b 100%);
+            --card-bg: var(--brand-salmon);
+            --text-primary: #ffffff;
+            --text-on-card: var(--brand-navy);
+            --accent: var(--brand-salmon);
+            --accent-soft: rgba(255, 92, 69, 0.1);
+            --glow: 0 0 20px rgba(255, 92, 69, 0.3);
+
+            /* Typography */
+            --font-display: 'DM Sans', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+
+            /* Spacing & Sizes (clamped) */
+            --title-size: clamp(2rem, 6vw, 5rem);
+            --h2-size: clamp(1.5rem, 4.5vw, 3.5rem);
+            --h3-size: clamp(1.2rem, 3vw, 2rem);
+            --body-size: clamp(1.15rem, 2.07vw, 1.5rem);
+            --slide-padding: clamp(2rem, 5vw, 5rem);
+            --content-gap: clamp(1rem, 3vw, 3rem);
+
+            /* Animations */
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration-normal: 0.8s;
+        }
+
+        /* ===========================================
+           VIEWPORT FITTING
+           =========================================== */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: var(--bg-gradient);
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: min(90vw, 1200px);
+            margin: 0 auto;
+            padding: var(--slide-padding);
+        }
+
+        /* ===========================================
+           ANIMATIONS & REVEALS
+           =========================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity var(--duration-normal) var(--ease-out-expo),
+                transform var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .slide.active .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .reveal:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .reveal:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .reveal:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .reveal:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        /* ===========================================
+           GLOBAL STYLES
+           =========================================== */
+        .slide-footer {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            opacity: 0.5;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .footer-icon {
+            width: 27px;
+            height: auto;
+        }
+
+        .footer-text {
+            width: clamp(72px, 7.2vw, 108px);
+            height: auto;
+        }
+
+        h2 {
+            font-size: var(--h2-size);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--content-gap);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .bullet-list li {
+            font-size: var(--body-size);
+            line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .bullet-list li::before {
+            content: "→";
+            color: var(--brand-salmon);
+            font-weight: bold;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 3rem;
+            left: 3rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--brand-salmon);
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 0;
+            opacity: 0.1;
+            pointer-events: none;
+            animation: float 20s infinite alternate;
+        }
+
+        .blob-1 {
+            width: 50vw;
+            height: 50vw;
+            background: var(--brand-salmon);
+            top: -10%;
+            left: -10%;
+        }
+
+        .blob-2 {
+            width: 40vw;
+            height: 40vw;
+            background: #4361ee;
+            bottom: -10%;
+            right: -10%;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(5vw, 5vh) scale(1.1);
+            }
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--brand-salmon);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .nav-dots {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            z-index: 1000;
+            padding: 1rem 0.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.4s var(--ease-out-expo);
+        }
+
+        .dot.active {
+            background: var(--brand-salmon);
+            transform: scale(1.8);
+            box-shadow: 0 0 15px var(--brand-salmon);
+        }
+
+        .back-link {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1100;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--brand-salmon);
+        }
+
+        .slide-accent {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.1;
+            pointer-events: none;
+            transition: all 1.5s var(--ease-out-expo);
+            filter: blur(2px);
+        }
+
+        .slide.active .slide-accent {
+            opacity: 0.15;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .A-accent-1 {
+            bottom: -5%;
+            right: 5%;
+            width: 35vw;
+        }
+
+        .A-accent-2 {
+            top: 10%;
+            left: -5%;
+            width: 30vw;
+        }
+
+        .A-accent-3 {
+            bottom: 10%;
+            right: -10%;
+            width: 40vw;
+        }
+
+        .A-accent-4 {
+            top: -5%;
+            right: 10%;
+            width: 25vw;
+        }
+
+        .A-accent-5 {
+            bottom: 0%;
+            left: 10%;
+            width: 30vw;
+        }
+
+        .A-accent-6 {
+            top: 20%;
+            right: -5%;
+            width: 35vw;
+        }
+
+        @media (max-width: 768px) {
+            .slide-number {
+                top: 1.5rem;
+                left: 1.5rem;
+                font-size: 2rem;
+            }
+
+            .nav-dots {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="progress-bar"></div>
+    <nav class="nav-dots"></nav>
+    <a href="index.html" class="back-link">← Back to Deck</a>
+
+    <!-- Slide A1: Modular Architecture -->
+    <section class="slide active" id="slide-1">
+        <div class="slide-number">A1</div>
+        <div class="slide-accent A-accent-1">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="40" y="40" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
+                    stroke-width="2" />
+                <rect x="40" y="85" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
+                    stroke-width="2" />
+                <rect x="40" y="130" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
+                    stroke-width="2" />
+                <path d="M100,70 V85 M100,115 V130" stroke="var(--brand-salmon)" stroke-width="2" />
+            </svg>
+        </div>
+        <div class="slide-content">
+            <h2 class="reveal">Salmon Uses a Modular Wallet Architecture</h2>
+            <ul class="bullet-list">
+                <li class="reveal">Modular wallet architecture</li>
+                <li class="reveal">Key management and signing layer</li>
+                <li class="reveal">Chain modules (Solana, Bitcoin, others)</li>
+                <li class="reveal">Application integration interface</li>
+                <li class="reveal">RPC and backend infrastructure</li>
+            </ul>
+            <div class="slide-footer">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                    class="footer-icon" alt="Icon">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                    class="footer-text" alt="Salmon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide A2: Security -->
+    <section class="slide" id="slide-2">
+        <div class="slide-number">A2</div>
+        <div class="slide-accent A-accent-2">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="var(--brand-salmon)" stroke-width="1" />
+                <circle cx="100" cy="100" r="60" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5"
+                    stroke-dasharray="5 5" />
+                <circle cx="100" cy="100" r="40" fill="none" stroke="var(--brand-salmon)" stroke-width="2" />
+                <path d="M100,85 V115 M85,100 H115" stroke="var(--brand-salmon)" stroke-width="2" />
+            </svg>
+        </div>
+        <div class="slide-content">
+            <h2 class="reveal">Security Is Designed as an Adversarial Open System</h2>
+            <ul class="bullet-list">
+                <li class="reveal">Security designed for adversarial environments</li>
+                <li class="reveal">Open‑source code review</li>
+                <li class="reveal">Continuous testing and audits</li>
+                <li class="reveal">Verifiable signing behavior</li>
+                <li class="reveal">Community vulnerability detection</li>
+            </ul>
+            <div class="slide-footer">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                    class="footer-icon" alt="Icon">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                    class="footer-text" alt="Salmon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide A3: Progress -->
+    <section class="slide" id="slide-3">
+        <div class="slide-number">A3</div>
+        <div class="slide-accent A-accent-3">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="50" width="140" height="100" fill="none" stroke="var(--brand-salmon)"
+                    stroke-width="1.5" />
+                <path d="M40,130 L60,100 L80,110 L110,70 L140,80 L160,50" fill="none" stroke="var(--brand-salmon)"
+                    stroke-width="2" />
+                <path d="M30,80 H170 M30,110 H170" stroke="var(--brand-salmon)" stroke-width="0.5" opacity="0.3" />
+            </svg>
+        </div>
+        <div class="slide-content">
+            <h2 class="reveal">Progress Is Measured Through Observable Outcomes</h2>
+            <ul class="bullet-list">
+                <li class="reveal">Outcomes guide progress as adoption grows</li>
+                <li class="reveal">Active users</li>
+                <li class="reveal">On‑chain transactions</li>
+                <li class="reveal">Ecosystem integrations</li>
+                <li class="reveal">Reliability metrics</li>
+                <li class="reveal">Developer contributions</li>
+            </ul>
+            <div class="slide-footer">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                    class="footer-icon" alt="Icon">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                    class="footer-text" alt="Salmon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide A4: Governance -->
+    <section class="slide" id="slide-4">
+        <div class="slide-number">A4</div>
+        <div class="slide-accent A-accent-4">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100,40 L160,80 L140,150 L60,150 L40,80 Z" fill="none" stroke="var(--brand-salmon)"
+                    stroke-width="2" />
+                <circle cx="100" cy="40" r="5" fill="var(--brand-salmon)" />
+                <circle cx="160" cy="80" r="5" fill="var(--brand-salmon)" />
+                <circle cx="140" cy="150" r="5" fill="var(--brand-salmon)" />
+                <circle cx="60" cy="150" r="5" fill="var(--brand-salmon)" />
+                <circle cx="40" cy="80" r="5" fill="var(--brand-salmon)" />
+                <path d="M100,40 L140,150 M100,40 L60,150 M160,80 L40,80 M160,80 L60,150" stroke="var(--brand-salmon)"
+                    stroke-width="0.5" opacity="0.4" />
+            </svg>
+        </div>
+        <div class="slide-content">
+            <h2 class="reveal">Open Source Governance Defines Ownership of the Project</h2>
+            <ul class="bullet-list">
+                <li class="reveal">Open governance structure</li>
+                <li class="reveal">Public repository ownership</li>
+                <li class="reveal">Transparent contribution process</li>
+                <li class="reveal">Public development roadmap</li>
+                <li class="reveal">Open ecosystem participation</li>
+            </ul>
+            <div class="slide-footer">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                    class="footer-icon" alt="Icon">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                    class="footer-text" alt="Salmon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide A5: Team -->
+    <section class="slide" id="slide-5">
+        <div class="slide-number">A5</div>
+        <div class="slide-accent A-accent-5">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="70" cy="70" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
+                <circle cx="130" cy="70" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
+                <circle cx="70" cy="130" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
+                <circle cx="130" cy="130" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
+                <path d="M70,70 L130,70 L130,130 L70,130 Z" fill="none" stroke="var(--brand-salmon)" stroke-width="0.5"
+                    stroke-dasharray="2 2" />
+            </svg>
+        </div>
+        <div class="slide-content">
+            <h2 class="reveal">Core Contributors Build and Maintain Salmon</h2>
+            <div class="bullet-list"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1000px;">
+                <div class="reveal">
+                    <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Nacho Mileo</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Product & Strategy. Leads overall
+                        product vision and execution for Salmon.</p>
+                </div>
+                <div class="reveal">
+                    <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Angel Mazzarello</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Operations & Finance. Serial
+                        entrepreneur, leads strategy and ecosystem growth.</p>
+                </div>
+                <div class="reveal">
+                    <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Dario Santos</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Technology. Leads technical
+                        architecture and security design.</p>
+                </div>
+                <div class="reveal">
+                    <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Rodrigo Menendez</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Legal. Oversees regulatory strategy
+                        and governance frameworks.</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                    class="footer-icon" alt="Icon">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                    class="footer-text" alt="Salmon">
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide A6: Why Now -->
+    <section class="slide" id="slide-6">
+        <div class="slide-number">A6</div>
+        <div class="slide-accent A-accent-6">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20,150 H180 M20,130 H180 M20,110 H180" stroke="var(--brand-salmon)" stroke-width="1"
+                    opacity="0.4" />
+                <path d="M100,20 Q150,20 150,80 T100,140 T50,80 T100,20" fill="none" stroke="var(--brand-salmon)"
+                    stroke-width="2" />
+                <circle cx="100" cy="80" r="10" fill="var(--brand-salmon)" />
+            </svg>
+        </div>
+        <div class="slide-content">
+            <h2 class="reveal">Why the Time Is Right for an Open Wallet Alternative</h2>
+            <ul class="bullet-list">
+                <li class="reveal">Wallets becoming the primary crypto interface</li>
+                <li class="reveal">Most wallets controlled by private companies</li>
+                <li class="reveal">Limited transparency around integrations and fees</li>
+                <li class="reveal">Rising demand for verifiable open infrastructure</li>
+                <li class="reveal">Multi‑chain ecosystems and DeFi expanding</li>
+                <li class="reveal">Salmon positioned to scale as adoption grows</li>
+            </ul>
+            <div class="slide-footer">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                    class="footer-icon" alt="Icon">
+                <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                    class="footer-text" alt="Salmon">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        class SlidePresentation {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.progressBar = document.querySelector('.progress-bar');
+                this.navDots = document.querySelector('.nav-dots');
+                this.currentIdx = 0;
+                this.init();
+            }
+
+            init() {
+                this.slides.forEach((_, i) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => this.scrollToSlide(i));
+                    this.navDots.appendChild(dot);
+                });
+
+                window.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') this.nextSlide();
+                    if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') this.prevSlide();
+                });
+
+                window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
+                window.addEventListener('resize', () => this.handleScroll());
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            const idx = Array.from(this.slides).indexOf(entry.target);
+                            this.updateNav(idx);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                this.slides.forEach(slide => observer.observe(slide));
+            }
+
+            scrollToSlide(index) {
+                if (index < 0 || index >= this.slides.length) return;
+                this.slides[index].scrollIntoView({ behavior: 'smooth' });
+            }
+
+            nextSlide() { this.scrollToSlide(this.currentIdx + 1); }
+            prevSlide() { this.scrollToSlide(this.currentIdx - 1); }
+
+            updateNav(index) {
+                this.currentIdx = index;
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+                const progress = ((index + 1) / this.slides.length) * 100;
+                this.progressBar.style.width = `${progress}%`;
+            }
+
+            handleScroll() {
+                const scrollPos = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const idx = Math.round(scrollPos / windowHeight);
+                if (idx !== this.currentIdx) {
+                    this.updateNav(idx);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new SlidePresentation();
+        });
+    </script>
+</body>
+
+</html>
