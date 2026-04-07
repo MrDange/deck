@@ -354,54 +354,70 @@
             }
         }
 
+        /* ===========================================
+           IMPROVED SLIDE ACCENT SVGS
+           =========================================== */
         .slide-accent {
             position: absolute;
             z-index: 0;
-            opacity: 0.1;
+            opacity: 0.08;
             pointer-events: none;
             transition: all 1.5s var(--ease-out-expo);
-            filter: blur(2px);
+            filter: blur(1px);
         }
 
         .slide.active .slide-accent {
-            opacity: 0.15;
-            transform: scale(1.1) rotate(5deg);
+            opacity: 0.12;
+            transform: scale(1.02);
         }
 
+        /* A1: Product Status - checklist/progress */
         .A-accent-1 {
             bottom: -5%;
-            right: 5%;
-            width: 35vw;
+            right: 0%;
+            width: 45vw;
         }
 
+        /* A2: Wallet Layer Matters - interface/portal */
         .A-accent-2 {
-            top: 10%;
+            top: 5%;
             left: -5%;
-            width: 30vw;
+            width: 42vw;
         }
 
+        /* A3: Closed Control Problem - locked barriers */
         .A-accent-3 {
-            bottom: 10%;
+            bottom: 0%;
             right: -10%;
+            width: 48vw;
+        }
+
+        /* A4: Target Segment - focus/target */
+        .A-accent-4 {
+            top: -5%;
+            right: 5%;
             width: 40vw;
         }
 
-        .A-accent-4 {
-            top: -5%;
-            right: 10%;
-            width: 25vw;
-        }
-
+        /* A5: Execution Priorities - organized list/gears */
         .A-accent-5 {
-            bottom: 0%;
-            left: 10%;
-            width: 30vw;
+            bottom: 5%;
+            left: 0%;
+            width: 44vw;
         }
 
+        /* A6: Strategic Positioning - compass/map */
         .A-accent-6 {
-            top: 20%;
+            top: 10%;
             right: -5%;
-            width: 35vw;
+            width: 46vw;
+        }
+
+        /* A7: Timing - clock/waves */
+        .A-accent-7 {
+            bottom: 10%;
+            left: -5%;
+            width: 42vw;
         }
 
         @media (max-width: 768px) {
@@ -427,27 +443,61 @@
 
     <div id="presentation-wrapper">
 
-        <!-- Slide A1: Modular Architecture -->
+        <!-- Slide A1: Product Status -->
         <section class="slide active" id="slide-1">
             <div class="slide-number">A1</div>
             <div class="slide-accent A-accent-1">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="40" y="40" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
-                        stroke-width="2" />
-                    <rect x="40" y="85" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
-                        stroke-width="2" />
-                    <rect x="40" y="130" width="120" height="30" rx="5" fill="none" stroke="var(--brand-salmon)"
-                        stroke-width="2" />
-                    <path d="M100,70 V85 M100,115 V130" stroke="var(--brand-salmon)" stroke-width="2" />
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="Ablur1" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        </filter>
+                        <linearGradient id="checkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF5C45;stop-opacity:0.9"/>
+                            <stop offset="100%" style="stop-color:#FF5C45;stop-opacity:0.3"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Checklist / progress indicators -->
+                    <g filter="url(#Ablur1)">
+                        <!-- Checkmarks -->
+                        <circle cx="100" cy="100" r="20" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.5"/>
+                        <path d="M90,100 L98,108 L112,92" stroke="#FF5C45" stroke-width="4" fill="none" opacity="0.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <circle cx="100" cy="180" r="20" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.45"/>
+                        <path d="M90,180 L98,188 L112,172" stroke="#FF5C45" stroke-width="4" fill="none" opacity="0.65" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <circle cx="100" cy="260" r="20" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.4"/>
+                        <path d="M90,260 L98,268 L112,252" stroke="#FF5C45" stroke-width="4" fill="none" opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <circle cx="100" cy="340" r="20" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.35"/>
+                        <path d="M90,340 L98,348 L112,332" stroke="#FF5C45" stroke-width="4" fill="none" opacity="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <!-- Progress bars -->
+                        <rect x="140" y="90" width="180" height="20" rx="10" fill="#FF5C45" opacity="0.15"/>
+                        <rect x="140" y="90" width="160" height="20" rx="10" fill="url(#checkGrad)" opacity="0.5"/>
+                        
+                        <rect x="140" y="170" width="180" height="20" rx="10" fill="#FF5C45" opacity="0.15"/>
+                        <rect x="140" y="170" width="140" height="20" rx="10" fill="#FF5C45" opacity="0.45"/>
+                        
+                        <rect x="140" y="250" width="180" height="20" rx="10" fill="#FF5C45" opacity="0.15"/>
+                        <rect x="140" y="250" width="120" height="20" rx="10" fill="#FF5C45" opacity="0.4"/>
+                        
+                        <rect x="140" y="330" width="180" height="20" rx="10" fill="#FF5C45" opacity="0.15"/>
+                        <rect x="140" y="330" width="100" height="20" rx="10" fill="#FF5C45" opacity="0.35"/>
+                        
+                        <!-- Device silhouettes -->
+                        <rect x="300" y="120" width="70" height="50" rx="6" fill="#FF5C45" opacity="0.2"/>
+                        <rect x="310" y="200" width="50" height="90" rx="8" fill="#FF5C45" opacity="0.25"/>
+                    </g>
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Salmon Uses a Modular Wallet Architecture</h2>
+                <h2 class="reveal">Product Status</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Key management and signing layer</li>
-                    <li class="reveal">Chain modules (Solana, Bitcoin, others)</li>
-                    <li class="reveal">Application integration interface</li>
-                    <li class="reveal">RPC and backend infrastructure</li>
+                    <li class="reveal">Live product across browser extension, web wallet, and Android</li>
+                    <li class="reveal">Public open-source repository with ongoing development in the open</li>
+                    <li class="reveal">Structural relaunch completed with new team and deep refactor</li>
+                    <li class="reveal">Product now positioned for platform expansion and scale</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -458,25 +508,50 @@
             </div>
         </section>
 
-        <!-- Slide A2: Security -->
+        <!-- Slide A2: Why the Wallet Layer Matters -->
         <section class="slide" id="slide-2">
             <div class="slide-number">A2</div>
             <div class="slide-accent A-accent-2">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="80" fill="none" stroke="var(--brand-salmon)" stroke-width="1" />
-                    <circle cx="100" cy="100" r="60" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5"
-                        stroke-dasharray="5 5" />
-                    <circle cx="100" cy="100" r="40" fill="none" stroke="var(--brand-salmon)" stroke-width="2" />
-                    <path d="M100,85 V115 M85,100 H115" stroke="var(--brand-salmon)" stroke-width="2" />
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="Ablur2" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+                        </filter>
+                        <radialGradient id="portalGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#FF5C45;stop-opacity:0.8"/>
+                            <stop offset="100%" style="stop-color:#FF5C45;stop-opacity:0"/>
+                        </radialGradient>
+                    </defs>
+                    <!-- Interface portal - gateway to crypto -->
+                    <g filter="url(#Ablur2)">
+                        <!-- Portal/window frame -->
+                        <rect x="120" y="80" width="200" height="240" rx="20" fill="none" stroke="#FF5C45" stroke-width="8" opacity="0.4"/>
+                        <rect x="140" y="110" width="160" height="170" rx="10" fill="#FF5C45" opacity="0.1"/>
+                        <!-- Interface elements -->
+                        <circle cx="170" cy="145" r="15" fill="#FF5C45" opacity="0.35"/>
+                        <rect x="195" y="135" width="85" height="20" rx="5" fill="#FF5C45" opacity="0.25"/>
+                        <rect x="155" y="180" width="130" height="12" rx="3" fill="#FF5C45" opacity="0.2"/>
+                        <rect x="155" y="205" width="100" height="12" rx="3" fill="#FF5C45" opacity="0.15"/>
+                        <rect x="155" y="230" width="115" height="12" rx="3" fill="#FF5C45" opacity="0.18"/>
+                        <!-- Action buttons -->
+                        <rect x="155" y="265" width="55" height="25" rx="8" fill="#FF5C45" opacity="0.3"/>
+                        <rect x="225" y="265" width="55" height="25" rx="8" fill="#FF5C45" opacity="0.2"/>
+                        <!-- Glowing portal center -->
+                        <circle cx="220" cy="200" r="50" fill="url(#portalGrad)" opacity="0.3"/>
+                        <!-- Access rays -->
+                        <path d="M340,120 L380,80" stroke="#FF5C45" stroke-width="3" opacity="0.3"/>
+                        <path d="M340,200 L380,200" stroke="#FF5C45" stroke-width="3" opacity="0.25"/>
+                        <path d="M340,280 L380,320" stroke="#FF5C45" stroke-width="3" opacity="0.3"/>
+                    </g>
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Security Is Designed as an Adversarial Open System</h2>
+                <h2 class="reveal">Why the Wallet Layer Matters</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Open‑source code review</li>
-                    <li class="reveal">Continuous testing and audits</li>
-                    <li class="reveal">Verifiable signing behavior</li>
-                    <li class="reveal">Community vulnerability detection</li>
+                    <li class="reveal">Wallets are the main user interface to crypto</li>
+                    <li class="reveal">They shape access across chains, apps, and governance</li>
+                    <li class="reveal">They are a point of control over discovery and integrations</li>
+                    <li class="reveal">They function as a strategic distribution layer</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -487,27 +562,52 @@
             </div>
         </section>
 
-        <!-- Slide A3: Progress -->
+        <!-- Slide A3: Why Closed Wallet Control Is a Problem -->
         <section class="slide" id="slide-3">
             <div class="slide-number">A3</div>
             <div class="slide-accent A-accent-3">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="30" y="50" width="140" height="100" fill="none" stroke="var(--brand-salmon)"
-                        stroke-width="1.5" />
-                    <path d="M40,130 L60,100 L80,110 L110,70 L140,80 L160,50" fill="none" stroke="var(--brand-salmon)"
-                        stroke-width="2" />
-                    <path d="M30,80 H170 M30,110 H170" stroke="var(--brand-salmon)" stroke-width="0.5" opacity="0.3" />
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="Ablur3" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+                        </filter>
+                        <linearGradient id="lockGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF5C45;stop-opacity:0.6"/>
+                            <stop offset="100%" style="stop-color:#E72A2A;stop-opacity:0.3"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Closed barriers / locked system -->
+                    <g filter="url(#Ablur3)">
+                        <!-- Large lock -->
+                        <rect x="150" y="140" width="120" height="100" rx="15" fill="url(#lockGrad)" opacity="0.5"/>
+                        <path d="M175,140 V110 A35,35 0 0,1 245,110 V140" fill="none" stroke="#FF5C45" stroke-width="12" opacity="0.45"/>
+                        <circle cx="210" cy="195" r="20" fill="none" stroke="#FF5C45" stroke-width="6" opacity="0.5"/>
+                        <rect x="205" y="195" width="10" height="25" fill="#FF5C45" opacity="0.5"/>
+                        <!-- Barriers/fences -->
+                        <rect x="80" y="280" width="10" height="100" fill="#FF5C45" opacity="0.3"/>
+                        <rect x="110" y="280" width="10" height="100" fill="#FF5C45" opacity="0.25"/>
+                        <rect x="140" y="280" width="10" height="100" fill="#FF5C45" opacity="0.35"/>
+                        <rect x="170" y="280" width="10" height="100" fill="#FF5C45" opacity="0.3"/>
+                        <rect x="200" y="280" width="10" height="100" fill="#FF5C45" opacity="0.25"/>
+                        <rect x="230" y="280" width="10" height="100" fill="#FF5C45" opacity="0.3"/>
+                        <rect x="260" y="280" width="10" height="100" fill="#FF5C45" opacity="0.25"/>
+                        <rect x="290" y="280" width="10" height="100" fill="#FF5C45" opacity="0.2"/>
+                        <!-- Horizontal bars -->
+                        <rect x="80" y="310" width="220" height="6" fill="#FF5C45" opacity="0.2"/>
+                        <rect x="80" y="340" width="220" height="6" fill="#FF5C45" opacity="0.15"/>
+                        <!-- Chain links -->
+                        <ellipse cx="320" cy="120" rx="25" ry="15" fill="none" stroke="#FF5C45" stroke-width="8" opacity="0.35" transform="rotate(30 320 120)"/>
+                        <ellipse cx="350" cy="140" rx="25" ry="15" fill="none" stroke="#FF5C45" stroke-width="8" opacity="0.3" transform="rotate(-20 350 140)"/>
+                    </g>
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Progress Is Measured Through Observable Outcomes</h2>
+                <h2 class="reveal">Why Closed Wallet Control Is a Problem</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Outcomes guide progress as adoption grows</li>
-                    <li class="reveal">Active users</li>
-                    <li class="reveal">On‑chain transactions</li>
-                    <li class="reveal">Ecosystem integrations</li>
-                    <li class="reveal">Reliability metrics</li>
-                    <li class="reveal">Developer contributions</li>
+                    <li class="reveal">Product decisions remain centralized</li>
+                    <li class="reveal">Integrations can be selectively prioritized</li>
+                    <li class="reveal">Monetization logic stays opaque</li>
+                    <li class="reveal">Open ecosystems remain dependent on closed access layers</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -518,30 +618,54 @@
             </div>
         </section>
 
-        <!-- Slide A4: Governance -->
+        <!-- Slide A4: Why Salmon's Target Segment Matters -->
         <section class="slide" id="slide-4">
             <div class="slide-number">A4</div>
             <div class="slide-accent A-accent-4">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M100,40 L160,80 L140,150 L60,150 L40,80 Z" fill="none" stroke="var(--brand-salmon)"
-                        stroke-width="2" />
-                    <circle cx="100" cy="40" r="5" fill="var(--brand-salmon)" />
-                    <circle cx="160" cy="80" r="5" fill="var(--brand-salmon)" />
-                    <circle cx="140" cy="150" r="5" fill="var(--brand-salmon)" />
-                    <circle cx="60" cy="150" r="5" fill="var(--brand-salmon)" />
-                    <circle cx="40" cy="80" r="5" fill="var(--brand-salmon)" />
-                    <path d="M100,40 L140,150 M100,40 L60,150 M160,80 L40,80 M160,80 L60,150"
-                        stroke="var(--brand-salmon)" stroke-width="0.5" opacity="0.4" />
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="Ablur4" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        </filter>
+                        <radialGradient id="focusGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#FF5C45;stop-opacity:0.9"/>
+                            <stop offset="100%" style="stop-color:#FF5C45;stop-opacity:0"/>
+                        </radialGradient>
+                    </defs>
+                    <!-- Target / focused group -->
+                    <g filter="url(#Ablur4)">
+                        <!-- Target rings -->
+                        <circle cx="200" cy="200" r="90" fill="none" stroke="#FF5C45" stroke-width="1.5" opacity="0.2"/>
+                        <circle cx="200" cy="200" r="70" fill="none" stroke="#FF5C45" stroke-width="2" opacity="0.3"/>
+                        <circle cx="200" cy="200" r="50" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.4"/>
+                        <circle cx="200" cy="200" r="30" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.5"/>
+                        <circle cx="200" cy="200" r="12" fill="#FF5C45" opacity="0.7"/>
+                        <!-- Crosshairs -->
+                        <line x1="200" y1="60" x2="200" y2="140" stroke="#FF5C45" stroke-width="2" opacity="0.35"/>
+                        <line x1="200" y1="260" x2="200" y2="340" stroke="#FF5C45" stroke-width="2" opacity="0.35"/>
+                        <line x1="60" y1="200" x2="140" y2="200" stroke="#FF5C45" stroke-width="2" opacity="0.35"/>
+                        <line x1="260" y1="200" x2="340" y2="200" stroke="#FF5C45" stroke-width="2" opacity="0.35"/>
+                        <!-- People silhouettes in target -->
+                        <circle cx="160" cy="160" r="15" fill="#FF5C45" opacity="0.35"/>
+                        <circle cx="240" cy="160" r="15" fill="#FF5C45" opacity="0.35"/>
+                        <circle cx="160" cy="240" r="15" fill="#FF5C45" opacity="0.3"/>
+                        <circle cx="240" cy="240" r="15" fill="#FF5C45" opacity="0.3"/>
+                        <circle cx="200" cy="130" r="12" fill="#FF5C45" opacity="0.4"/>
+                        <circle cx="200" cy="270" r="12" fill="#FF5C45" opacity="0.35"/>
+                        <!-- Central glow -->
+                        <circle cx="200" cy="200" r="25" fill="url(#focusGrad)" opacity="0.4"/>
+                        <!-- Influence ripple -->
+                        <circle cx="200" cy="200" r="120" fill="none" stroke="#FF5C45" stroke-width="0.5" opacity="0.15"/>
+                    </g>
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Open Source Governance Defines Ownership of the Project</h2>
+                <h2 class="reveal">Why Salmon's Target Segment Matters</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Open governance structure</li>
-                    <li class="reveal">Public repository ownership</li>
-                    <li class="reveal">Transparent contribution process</li>
-                    <li class="reveal">Public development roadmap</li>
-                    <li class="reveal">Open ecosystem participation</li>
+                    <li class="reveal">Crypto-native users influence broader adoption disproportionately</li>
+                    <li class="reveal">Builders and contributors amplify the tools they trust</li>
+                    <li class="reveal">High-alignment users create stronger ecosystem credibility</li>
+                    <li class="reveal">Strategic density matters more than raw user count</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -552,46 +676,57 @@
             </div>
         </section>
 
-        <!-- Slide A5: Team -->
+        <!-- Slide A5: Execution Priorities -->
         <section class="slide" id="slide-5">
             <div class="slide-number">A5</div>
             <div class="slide-accent A-accent-5">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="70" cy="70" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
-                    <circle cx="130" cy="70" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
-                    <circle cx="70" cy="130" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
-                    <circle cx="130" cy="130" r="25" fill="none" stroke="var(--brand-salmon)" stroke-width="1.5" />
-                    <path d="M70,70 L130,70 L130,130 L70,130 Z" fill="none" stroke="var(--brand-salmon)"
-                        stroke-width="0.5" stroke-dasharray="2 2" />
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="Ablur5" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        </filter>
+                        <linearGradient id="priorityGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#FF5C45;stop-opacity:0.3"/>
+                            <stop offset="100%" style="stop-color:#FF5C45;stop-opacity:0.7"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Organized priorities / gears -->
+                    <g filter="url(#Ablur5)">
+                        <!-- Four quadrants / pillars -->
+                        <rect x="90" y="90" width="90" height="90" rx="12" fill="#FF5C45" opacity="0.25"/>
+                        <rect x="220" y="90" width="90" height="90" rx="12" fill="#FF5C45" opacity="0.2"/>
+                        <rect x="90" y="220" width="90" height="90" rx="12" fill="#FF5C45" opacity="0.2"/>
+                        <rect x="220" y="220" width="90" height="90" rx="12" fill="#FF5C45" opacity="0.15"/>
+                        <!-- Connecting lines -->
+                        <line x1="180" y1="135" x2="220" y2="135" stroke="#FF5C45" stroke-width="3" opacity="0.3"/>
+                        <line x1="135" y1="180" x2="135" y2="220" stroke="#FF5C45" stroke-width="3" opacity="0.3"/>
+                        <line x1="265" y1="180" x2="265" y2="220" stroke="#FF5C45" stroke-width="3" opacity="0.3"/>
+                        <line x1="180" y1="265" x2="220" y2="265" stroke="#FF5C45" stroke-width="3" opacity="0.3"/>
+                        <!-- Center hub -->
+                        <circle cx="200" cy="200" r="20" fill="#FF5C45" opacity="0.4"/>
+                        <!-- Gear teeth suggestions -->
+                        <rect x="195" y="60" width="10" height="20" fill="#FF5C45" opacity="0.25"/>
+                        <rect x="195" y="320" width="10" height="20" fill="#FF5C45" opacity="0.25"/>
+                        <rect x="60" y="195" width="20" height="10" fill="#FF5C45" opacity="0.25"/>
+                        <rect x="320" y="195" width="20" height="10" fill="#FF5C45" opacity="0.25"/>
+                        <!-- Priority indicators -->
+                        <rect x="105" y="110" width="40" height="6" rx="3" fill="#FF5C45" opacity="0.5"/>
+                        <rect x="105" y="125" width="60" height="6" rx="3" fill="#FF5C45" opacity="0.35"/>
+                        <circle cx="265" cy="135" r="18" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.4"/>
+                        <circle cx="135" cy="265" r="18" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.35"/>
+                        <!-- Soft glow -->
+                        <ellipse cx="200" cy="200" rx="100" ry="100" fill="#FF5C45" opacity="0.08"/>
+                    </g>
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Core Contributors Build and Maintain Salmon</h2>
-                <div class="bullet-list"
-                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1000px;">
-                    <div class="reveal">
-                        <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Nacho Mileo</h3>
-                        <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Product & Strategy. Leads
-                            overall
-                            product vision and execution for Salmon.</p>
-                    </div>
-                    <div class="reveal">
-                        <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Angel Mazzarello</h3>
-                        <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Operations & Finance. Serial
-                            entrepreneur, leads strategy and ecosystem growth.</p>
-                    </div>
-                    <div class="reveal">
-                        <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Dario Santos</h3>
-                        <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Technology. Leads technical
-                            architecture and security design.</p>
-                    </div>
-                    <div class="reveal">
-                        <h3 style="color: var(--brand-salmon); margin: 0 0 0.5rem 0;">Rodrigo Menendez</h3>
-                        <p style="font-size: 0.9rem; line-height: 1.4; color: #d1d5db;">Legal. Oversees regulatory
-                            strategy
-                            and governance frameworks.</p>
-                    </div>
-                </div>
+                <h2 class="reveal">Execution Priorities</h2>
+                <ul class="bullet-list">
+                    <li class="reveal"><strong>Product:</strong> maintain core wallet features and improve UX reliability</li>
+                    <li class="reveal"><strong>Infrastructure:</strong> strengthen security, performance, and operational resilience</li>
+                    <li class="reveal"><strong>Platform:</strong> expand mobile parity and multi-network support</li>
+                    <li class="reveal"><strong>Distribution:</strong> deepen integrations, tooling, and community-led growth</li>
+                </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
                         class="footer-icon" alt="Icon">
@@ -601,27 +736,115 @@
             </div>
         </section>
 
-        <!-- Slide A6: Why Now -->
+        <!-- Slide A6: Strategic Positioning -->
         <section class="slide" id="slide-6">
             <div class="slide-number">A6</div>
             <div class="slide-accent A-accent-6">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20,150 H180 M20,130 H180 M20,110 H180" stroke="var(--brand-salmon)" stroke-width="1"
-                        opacity="0.4" />
-                    <path d="M100,20 Q150,20 150,80 T100,140 T50,80 T100,20" fill="none" stroke="var(--brand-salmon)"
-                        stroke-width="2" />
-                    <circle cx="100" cy="80" r="10" fill="var(--brand-salmon)" />
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="Ablur6" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3.5"/>
+                        </filter>
+                        <radialGradient id="compassGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#FF5C45;stop-opacity:0.8"/>
+                            <stop offset="100%" style="stop-color:#FF5C45;stop-opacity:0"/>
+                        </radialGradient>
+                    </defs>
+                    <!-- Compass / positioning map -->
+                    <g filter="url(#Ablur6)">
+                        <!-- Compass outer ring -->
+                        <circle cx="200" cy="200" r="100" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.35"/>
+                        <circle cx="200" cy="200" r="85" fill="none" stroke="#FF5C45" stroke-width="1" opacity="0.25"/>
+                        <!-- Cardinal direction marks -->
+                        <path d="M200,85 L205,100 L195,100 Z" fill="#FF5C45" opacity="0.5"/>
+                        <path d="M200,315 L205,300 L195,300 Z" fill="#FF5C45" opacity="0.3"/>
+                        <path d="M85,200 L100,205 L100,195 Z" fill="#FF5C45" opacity="0.3"/>
+                        <path d="M315,200 L300,205 L300,195 Z" fill="#FF5C45" opacity="0.3"/>
+                        <!-- Compass needle pointing to positioning -->
+                        <path d="M200,200 L170,130 L200,150 L230,130 Z" fill="#FF5C45" opacity="0.5"/>
+                        <path d="M200,200 L170,270 L200,250 L230,270 Z" fill="#FF5C45" opacity="0.25"/>
+                        <circle cx="200" cy="200" r="12" fill="#FF5C45" opacity="0.6"/>
+                        <!-- Positioning arc marks -->
+                        <path d="M150,150 Q200,120 250,150" stroke="#FF5C45" stroke-width="2" fill="none" opacity="0.3"/>
+                        <path d="M140,280 Q200,310 260,280" stroke="#FF5C45" stroke-width="2" fill="none" opacity="0.2"/>
+                        <!-- Map grid suggestion -->
+                        <line x1="120" y1="200" x2="280" y2="200" stroke="#FF5C45" stroke-width="0.5" opacity="0.15"/>
+                        <line x1="200" y1="120" x2="200" y2="280" stroke="#FF5C45" stroke-width="0.5" opacity="0.15"/>
+                        <!-- Position marker -->
+                        <circle cx="250" cy="150" r="8" fill="#FF5C45" opacity="0.45"/>
+                        <circle cx="250" cy="150" r="15" fill="none" stroke="#FF5C45" stroke-width="2" opacity="0.3"/>
+                        <!-- Glow center -->
+                        <circle cx="200" cy="200" r="40" fill="url(#compassGrad)" opacity="0.25"/>
+                    </g>
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Why the Time Is Right for an Open Wallet Alternative</h2>
+                <h2 class="reveal">Strategic Positioning</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Wallets becoming the primary crypto interface</li>
-                    <li class="reveal">Most wallets controlled by private companies</li>
-                    <li class="reveal">Limited transparency around integrations and fees</li>
-                    <li class="reveal">Rising demand for verifiable open infrastructure</li>
-                    <li class="reveal">Multi‑chain ecosystems and DeFi expanding</li>
-                    <li class="reveal">Salmon positioned to scale as adoption grows</li>
+                    <li class="reveal">Salmon is not a convenience-first mass wallet play</li>
+                    <li class="reveal">Salmon is an open wallet infrastructure play</li>
+                    <li class="reveal">The wedge is alignment, transparency, and ecosystem fit</li>
+                    <li class="reveal">The ambition is to become the wallet most aligned with this ecosystem</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide A7: Why the Timing Is Better Now -->
+        <section class="slide" id="slide-7">
+            <div class="slide-number">A7</div>
+            <div class="slide-accent A-accent-7">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="Ablur7" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        </filter>
+                        <linearGradient id="timeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#FF5C45;stop-opacity:0.2"/>
+                            <stop offset="50%" style="stop-color:#FF5C45;stop-opacity:0.8"/>
+                            <stop offset="100%" style="stop-color:#FF5C45;stop-opacity:0.2"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Clock / timing waves -->
+                    <g filter="url(#Ablur7)">
+                        <!-- Clock face -->
+                        <circle cx="200" cy="200" r="90" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.35"/>
+                        <circle cx="200" cy="200" r="75" fill="none" stroke="#FF5C45" stroke-width="1" opacity="0.2"/>
+                        <!-- Clock markers -->
+                        <line x1="200" y1="115" x2="200" y2="125" stroke="#FF5C45" stroke-width="3" opacity="0.4"/>
+                        <line x1="200" y1="285" x2="200" y2="275" stroke="#FF5C45" stroke-width="3" opacity="0.3"/>
+                        <line x1="115" y1="200" x2="125" y2="200" stroke="#FF5C45" stroke-width="3" opacity="0.3"/>
+                        <line x1="285" y1="200" x2="275" y2="200" stroke="#FF5C45" stroke-width="3" opacity="0.3"/>
+                        <!-- Clock hands showing opportune moment -->
+                        <line x1="200" y1="200" x2="200" y2="140" stroke="#FF5C45" stroke-width="5" opacity="0.6" stroke-linecap="round"/>
+                        <line x1="200" y1="200" x2="245" y2="220" stroke="#FF5C45" stroke-width="4" opacity="0.5" stroke-linecap="round"/>
+                        <circle cx="200" cy="200" r="10" fill="#FF5C45" opacity="0.6"/>
+                        <!-- Wave patterns - timing/flow -->
+                        <path d="M50,320 Q100,300 150,320 T250,320 T350,320" stroke="url(#timeGrad)" stroke-width="4" fill="none" opacity="0.4"/>
+                        <path d="M50,345 Q100,325 150,345 T250,345 T350,345" stroke="#FF5C45" stroke-width="3" fill="none" opacity="0.3"/>
+                        <path d="M50,370 Q100,350 150,370 T250,370 T350,370" stroke="#FF5C45" stroke-width="2" fill="none" opacity="0.2"/>
+                        <!-- Momentum arrows -->
+                        <path d="M320,80 L350,60 L350,75 L380,55" stroke="#FF5C45" stroke-width="3" fill="none" opacity="0.35"/>
+                        <circle cx="330" cy="100" r="6" fill="#FF5C45" opacity="0.4"/>
+                        <circle cx="350" cy="120" r="5" fill="#FF5C45" opacity="0.3"/>
+                        <!-- Converging timing lines -->
+                        <path d="M100,100 Q150,150 200,200" stroke="#FF5C45" stroke-width="2" fill="none" opacity="0.25"/>
+                        <path d="M300,100 Q250,150 200,200" stroke="#FF5C45" stroke-width="2" fill="none" opacity="0.25"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">Why the Timing Is Better Now</h2>
+                <ul class="bullet-list">
+                    <li class="reveal">Open infrastructure is regaining relevance</li>
+                    <li class="reveal">Crypto-native coordination is more mature</li>
+                    <li class="reveal">Serious builders increasingly value verifiable tools</li>
+                    <li class="reveal">Salmon now has product, team, and timing aligned</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
