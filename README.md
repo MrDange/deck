@@ -1,2 +1,2 @@
-# deck
+# Salmon Deck
 Salmon Investor Deck
