@@ -1,167 +1,153 @@
-# Salmon Wallet
-## Open Wallet Infrastructure
-
----
-
-## Open Ecosystems Still Depend on Closed Wallet Infrastructure
-
-- One of crypto's most important access layers remains under private control
-- That creates structural dependence at the point of access
-- Closed wallet infrastructure still shapes how users enter ecosystems
+# DECK
+### Slide 1: Open Ecosystems Still Depend on Closed Wallet Infrastructure
+- One of crypto’s most important access layers remains under private control
+- Open ecosystems still rely on private companies for a critical interface
+- That creates structural dependence at the point of user access
 - Salmon builds the open alternative
 
----
+### Slide 2: Wallets Control Distribution Across Crypto
+- Wallets do more than hold assets and sign transactions
+- They shape discovery, integrations, defaults, and ecosystem access
+- They influence which apps, networks, and flows users encounter first
+- Whoever controls the wallet layer influences distribution
 
-## The Wallet Layer Controls Distribution Across Crypto
+### Slide 3: Self-Custody Does Not Eliminate Wallet-Layer Control
+- Users may control keys while companies still control the interface layer
+- Closed wallets still shape roadmap decisions and monetization logic
+- That leaves a strategic access layer under private governance
+- Self-custody alone does not solve wallet-layer misalignment
 
-- Wallets shape access across chains, apps, and ecosystems
-- They influence discovery, integrations, and defaults
-- They affect how users move and transact
-- Whoever controls the wallet layer controls distribution
+### Slide 4: Salmon Builds the Open Wallet Layer
+- Salmon is open-source, self-custodial, and community-owned
+- It is designed to keep the wallet layer transparent, neutral, and verifiable
+- It is built as infrastructure aligned with the ecosystem
+- Its ownership-coin model extends that alignment into governance and capital allocation
 
----
-
-## Self-Custody Alone Does Not Solve Wallet-Layer Control
-
-- Users may hold keys while companies still control the layer
-- Closed wallets still control roadmap, integrations, and monetization
-- That leaves a strategic access layer under private control
-- Self-custody does not eliminate wallet-layer misalignment
-
----
-
-## Salmon Builds the Open Wallet Layer
-
-- Open-source, community-owned, self-custodial wallet
-- Built to keep the wallet layer transparent and neutral
-- Designed as open infrastructure, not a closed shell
-- Aligned with the ecosystem it serves
-
----
-
-## Salmon Is Built for the Users Who Shape Ecosystems
-
-- Built for crypto natives, builders, and contributors
-- These users influence trust, integrations, and adoption
-- They amplify the tools they choose to use
-- Their ecosystem influence outweighs their raw numbers
-
----
-
-## Salmon Is Already Live and in Execution
-
-- Launched in 2023
-- Browser extension, web wallet, Android app, and open-source repository
-- Structural relaunch completed with new developer team and deep refactor
-- The product now enters a scaling phase
-
----
-
-## This Thesis Belongs in the Solana Ecosystem
-
-- Solana rewards products with clear utility and ecosystem leverage
-- Its strongest builders value infrastructure that compounds across the stack
-- Crypto-native capital values execution, clarity, and alignment
-- Salmon fits those conditions unusually well
-
----
-
-## The Opportunity Is High-Alignment Wallet Infrastructure, Not Mass Wallet
-
-- Not all wallet users matter equally
-- The opportunity is the segment with the highest ecosystem influence
-- Strategic density matters more than raw user count
-- This creates stronger adoption quality and long-term leverage
-
----
-
-## Capital Accelerates Scale Validation Across Product, Infrastructure, and Distribution
-
-- The core build phase has already happened
-- Product capital speeds roadmap delivery and reliability
-- Infrastructure capital strengthens security and resilience
-- Distribution capital proves pull through integrations, ecosystem reach, and aligned adoption
-
----
-
-## Salmon Can Become the Most Aligned Wallet with This Ecosystem
-
-- This ecosystem still lacks a wallet layer aligned with its values
-- That position is strategically important and still available
-- Salmon is already live, aligned, and positioned to occupy it
-- Salmon can become the natural wallet for aligned projects and contributors
-
----
-
-## Salmon Is Positioned to Build the Open Wallet Layer
-
-- **Website:** [salmonwallet.io](https://www.salmonwallet.io/)
-- **GitHub:** [github.com/salmon-wallet](https://github.com/salmon-wallet)
-- **Email:** [info@salmonwallet.io](mailto:info@salmonwallet.io)
-
----
-
-# Appendix
-
----
-
-## Product Status
-
-- Live product across browser extension, web wallet, and Android
-- Public open-source repository with ongoing development in the open
-- Structural relaunch completed with new team and deep refactor
-- Product now positioned for platform expansion and scale
-
----
-
-## Why the Wallet Layer Matters
-
-- Wallets are the main user interface to crypto
-- They shape access across chains, apps, and governance
-- They are a point of control over discovery and integrations
-- They function as a strategic distribution layer
-
----
-
-## Why Closed Wallet Control Is a Problem
-
-- Product decisions remain centralized
-- Integrations can be selectively prioritized
-- Monetization logic stays opaque
-- Open ecosystems remain dependent on closed access layers
-
----
-
-## Why Salmon's Target Segment Matters
-
-- Crypto-native users influence broader adoption disproportionately
-- Builders and contributors amplify the tools they trust
-- High-alignment users create stronger ecosystem credibility
+### Slide 5: Salmon Focuses on High-Alignment Users Who Shape Ecosystems
+- Salmon is not targeting the broadest wallet market first
+- It is built for crypto natives, builders, integrators, contributors, and aligned communities
+- These users influence trust, integrations, adoption quality, and ecosystem leverage
 - Strategic density matters more than raw user count
 
+### Slide 6: Salmon Has Moved Beyond Initial Build Risk
+- Salmon launched in 2023 and already operates across its browser extension, web wallet, Android app, and public repository
+- Salmon also operates an active Solana validator with real ecosystem alignment
+- The project has completed a structural relaunch and deep refactor
+- This raise funds scale readiness around an existing product
+
+### Slide 7: Salmon Structures the Raise Around a Minimum Executable Plan
+- $300,000 funds the minimum executable 12-month plan
+- $450,000 extends runway to approximately 18 months
+- Operating burn remains anchored at approximately $25,000 per month
+- The raise scales execution confidence, not operating ambition
+
+### Slide 8: Salmon Allocates Capital to the Functions That Determine Launch Success
+- $18,300/month funds lean execution across product, engineering, operations, and governance
+- $4,200/month funds infrastructure reliability and operational resilience
+- $2,000/month funds integrations, ecosystem partnerships, and aligned acquisition
+- $500/month preserves legal/admin readiness, reporting discipline, and contingency room
+
+### Slide 9: Salmon Executes a 12-Month Roadmap With Measurable Milestones
+- Q3 2026 improves scale readiness through release cadence and core UX reliability
+- Q4 2026 expands ecosystem distribution through iOS TestFlight and priority integrations
+- Q1 2027 deepens adoption quality through new product depth and retention work
+- Q2 2027 validates pull through stronger integrations, tooling, and evidence-based scale decisions
+
+### Slide 10: Salmon Acquires Aligned Users Through Integration-Led Distribution
+- Ecosystem integrations place Salmon inside existing workflows and products
+- Developer-first positioning makes Salmon useful before it tries to become broad
+- Contributor channels and technical transparency create trust-based distribution
+- Salmon deliberately avoids paid growth loops without retention
+
+### Slide 11: Salmon Sets Clean Launch Standards Before Asking the Community to Own It
+- SAL is framed as a proposed ownership coin, not a live token
+- No prior TGE, day-one airdrop, or immediate team unlock are part of the setup
+- Core assets must be alignable with DAO governance before launch
+- Material obligations must be disclosed up front to avoid hidden complexity
+
+### Slide 12: Salmon Extends the Opportunity Beyond a Wallet Product
+- Salmon is already past the stage of proving the product can exist
+- If execution validates pull, Salmon can evolve into ecosystem wallet infrastructure
+- That would allow Salmon to compound integrations, contributors, and distribution
+- This raise funds the first phase of a much larger infrastructure opportunity
+
 ---
 
-## Execution Priorities
+## Appendix
 
-- **Product:** maintain core wallet features and improve UX reliability
-- **Infrastructure:** strengthen security, performance, and operational resilience
-- **Platform:** expand mobile parity and multi-network support
-- **Distribution:** deepen integrations, tooling, and community-led growth
+### A1: Core Thesis
+- Open ecosystems still depend on closed wallet infrastructure
+- The wallet layer remains a strategic point of ecosystem control
+- Salmon builds the open alternative at that layer
+- The product is designed to be open-source, self-custodial, and community-owned
+- The thesis is infrastructure, not wallet convenience
 
----
+### A2: Product Status
+- Salmon already operates a browser extension, web wallet, Android app, and public repository
+- The initial launch happened in 2023
+- The project later completed a structural relaunch
+- The codebase has already gone through a deep refactor
+- The current phase is scale readiness, not product discovery
 
-## Strategic Positioning
+### A3: Raise Structure
+- Minimum Goal: $300,000
+- Fixed Cap: $450,000
+- Planned monthly spending remains near $25,000
+- The minimum funds roughly 12 months of execution
+- The fixed cap extends runway to roughly 18 months without increasing burn discipline
 
-- Salmon is not a convenience-first mass wallet play
-- Salmon is an open wallet infrastructure play
-- The wedge is alignment, transparency, and ecosystem fit
-- The ambition is to become the wallet most aligned with this ecosystem
+### A4: Monthly Burn Breakdown
+- Team: $18,300/month
+- Infrastructure: $4,200/month
+- Growth & Ecosystem: $2,000/month
+- Governance, Legal & Contingency: $500/month
+- Total planned burn: $25,000/month
 
----
+### A5: 12-Month Roadmap Detail
+- Q3 2026 focuses on scale readiness through Android release, QA cadence, UX reliability, and monitoring
+- Q4 2026 focuses on ecosystem distribution through iOS TestFlight, integrations, watch mode, and onboarding
+- Q1 2027 focuses on adoption quality through portfolio view, notifications, contributor program, and retention
+- Q2 2027 focuses on pull validation through deeper integrations, tooling, performance, and demand-led expansion
+- The roadmap is designed to show measurable progress
 
-## Why the Timing Is Better Now
+### A6: Market, Differentiation, and Validator Alignment
+- Primary users are crypto-native users, builders, contributors, integrators, and aligned infrastructure users
+- Secondary users include governance communities, wallet tooling developers, and neutral-infrastructure projects
+- Salmon differentiates through open-source code, self-custody, community ownership, transparency, and reliability
+- The active Solana validator strengthens proof of ecosystem alignment
+- The positioning is infrastructure-first, not convenience-first
 
-- Open infrastructure is regaining relevance
-- Crypto-native coordination is more mature
-- Serious builders increasingly value verifiable tools
-- Salmon now has product, team, and timing aligned
+### A7: Go-to-Market Overview
+- Salmon grows through ecosystem integrations rather than broad paid acquisition
+- Developer-first positioning helps it become useful before it tries to become broad
+- Contributor channels and community distribution support credible adoption
+- Technical transparency acts as a trust lever
+- The GTM goal is adoption quality, not vanity volume
+
+### A8: Token Readiness
+- Proposed ownership coin: Salmon Token
+- Proposed ticker: SAL
+- No existing token or prior TGE are part of the current framing
+- No day-one airdrop or immediate team unlock are planned
+- The performance package is 2.9M SAL subject to cliff, TWAP, and performance-based unlocks
+
+### A9: IP, Asset Readiness, and Disclosure Standard
+- Core assets must be compatible with DAO-controlled ownership and governance
+- Priority assets include domains, GitHub, release accounts, infrastructure accounts, brand assets, and contributor rights
+- Launch readiness requires identifying blockers linked to individuals, vendors, or legacy entities
+- Material obligations must be reviewed before launch
+- The standard is no hidden deals, no unclear token promises, and no undisclosed obligations
+
+### A10: Team and Execution Model
+- Nacho Mileo leads product, roadmap prioritization, wallet UX, and ecosystem coordination
+- Angel Mazzarello leads operations, partnerships, use-of-funds discipline, and community accountability
+- Dario Santos leads architecture, security, reliability, integrations, and engineering execution
+- Rodrigo Menendez leads legal structure, IP readiness, contributor rights, disclosures, and governance
+- The operating model is intentionally lean, clearly owned, and burn-disciplined
+
+### A11: Prior Funding and Early Build Support
+- Bootstrapped funding: $80,000 in 2022
+- Grants: Serum $2,500 and Eclipse $40,000
+- These resources helped absorb early build risk
+- The current raise is aimed at the next stage, not the initial build
+- That next stage is scale readiness, reliability, mobile parity, integrations, and ecosystem pull
