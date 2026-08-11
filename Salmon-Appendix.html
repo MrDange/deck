@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salmon Wallet — Community-Owned Wallet Appendix</title>
+    <title>Salmon Wallet — Investor Deck Appendix</title>
     <meta name="description"
         content="Salmon Wallet Appendix — Technical details of the modular wallet architecture, security design, and ecosystem integration.">
     <meta name="keywords"
@@ -14,14 +14,14 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.salmonwallet.io/appendix">
-    <meta property="og:title" content="Salmon Wallet — Community-Owned Wallet Appendix">
-    <meta property="og:description" content="Deep dive into Salmon's modular architecture and security systems.">
+    <meta property="og:title" content="Salmon Wallet — Investor Deck Appendix">
+    <meta property="og:description" content="Details on Salmon's product, integrations, distribution, funding, roadmap, and governance readiness.">
     <meta property="og:image" content="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Salmon Wallet — Community-Owned Wallet Appendix">
-    <meta name="twitter:description" content="Deep dive into Salmon's modular architecture and security systems.">
+    <meta name="twitter:description" content="Details on Salmon's product, integrations, distribution, funding, roadmap, and governance readiness.">
     <meta name="twitter:image" content="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75">
 
     <!-- Favicon -->
@@ -205,15 +205,18 @@
         .bullet-list li {
             font-size: var(--body-size);
             line-height: 1.4;
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+            display: block;
+            position: relative;
+            padding-left: 2.5rem;
         }
 
         .bullet-list li::before {
             content: "→";
             color: var(--brand-salmon);
             font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         .slide-number {
@@ -494,11 +497,11 @@
             <div class="slide-content">
                 <h2 class="reveal">Core Thesis</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Open ecosystems still depend on closed wallet infrastructure</li>
-                    <li class="reveal">The wallet layer remains a strategic point of ecosystem control</li>
-                    <li class="reveal">Salmon builds the open alternative at that layer</li>
-                    <li class="reveal">The product is designed to be open-source, self-custodial, and community-owned</li>
-                    <li class="reveal">The thesis is infrastructure, not wallet convenience</li>
+                    <li class="reveal">Salmon builds <strong>open wallet infrastructure</strong></li>
+                    <li class="reveal">The core wallet should remain <strong>lightweight, reliable, and understandable</strong></li>
+                    <li class="reveal">Selected modular integrations expand what users can do without permanent feature accumulation</li>
+                    <li class="reveal">Partners need a credible path from integration to activation, feedback, usage, and traction</li>
+                    <li class="reveal">Salmon’s wedge is <strong>turning selected integrations into measurable distribution</strong></li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -508,6 +511,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Slide A2: Product Status -->
         <section class="slide" id="slide-2">
@@ -547,13 +552,13 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Product Status</h2>
+                <h2 class="reveal">Product Foundation</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Salmon already operates a browser extension, web wallet, Android app, and public repository</li>
-                    <li class="reveal">The initial launch happened in 2023</li>
-                    <li class="reveal">The project later completed a structural relaunch</li>
-                    <li class="reveal">The codebase has already gone through a deep refactor</li>
-                    <li class="reveal">The current phase is scale readiness, not product discovery</li>
+                    <li class="reveal">The wallet core focuses on <strong>asset control, signing clarity, safety, and reliable interaction</strong></li>
+                    <li class="reveal">Salmon should avoid becoming a heavy financial super-app</li>
+                    <li class="reveal">Useful capabilities can be added as <strong>modular integrations / Powerups</strong></li>
+                    <li class="reveal">Powerups should justify their place through real user value</li>
+                    <li class="reveal">Integrations can be improved, deprioritized, or removed without rebuilding the entire product</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -563,6 +568,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Slide A3: Raise Structure -->
         <section class="slide" id="slide-3">
@@ -604,13 +611,13 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Raise Structure</h2>
+                <h2 class="reveal">Partner Wedge</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Minimum Goal: $300,000</li>
-                    <li class="reveal">Fixed Cap: $450,000</li>
-                    <li class="reveal">Planned monthly spending remains near $25,000</li>
-                    <li class="reveal">The minimum funds roughly 12 months of execution</li>
-                    <li class="reveal">The fixed cap extends runway to roughly 18 months without increasing burn discipline</li>
+                    <li class="reveal">Salmon prioritizes partners whose integrations give users a concrete reason to use the wallet</li>
+                    <li class="reveal">Initial target groups include Solana-native applications, NFT communities, self-custody/security tools, infra products, and aligned builders</li>
+                    <li class="reveal">Selection depends on <strong>strategic fit, user value, and adoption potential</strong></li>
+                    <li class="reveal">The goal is not to collect integrations, but to prove repeatable user behavior</li>
+                    <li class="reveal">Strategic density matters more than generic wallet volume</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -620,6 +627,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Slide A4: Monthly Burn Breakdown -->
         <section class="slide" id="slide-4">
@@ -663,13 +672,13 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Monthly Burn Breakdown</h2>
+                <h2 class="reveal">Integration Application Pipeline</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Team: $18,300/month</li>
-                    <li class="reveal">Infrastructure: $4,200/month</li>
-                    <li class="reveal">Growth &amp; Ecosystem: $2,000/month</li>
-                    <li class="reveal">Governance, Legal &amp; Contingency: $500/month</li>
-                    <li class="reveal">Total planned burn: $25,000/month</li>
+                    <li class="reveal"><strong>Apply:</strong> partner submits use case, users, scope, permissions, maintenance plan, and distribution hypothesis</li>
+                    <li class="reveal"><strong>Qualify:</strong> Salmon evaluates strategic fit, user value, technical feasibility, and product coherence</li>
+                    <li class="reveal"><strong>Build:</strong> Salmon and partner define ownership, milestones, dependencies, and implementation path</li>
+                    <li class="reveal"><strong>Validate:</strong> Salmon reviews security, UX, compatibility, permissions, and operational impact</li>
+                    <li class="reveal"><strong>Launch &amp; Measure:</strong> approved integrations go live and are measured through activation, usage, retention, and feedback</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -679,6 +688,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Slide A5: 12-Month Roadmap Detail -->
         <section class="slide" id="slide-5">
@@ -724,13 +735,13 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">12-Month Roadmap Detail</h2>
+                <h2 class="reveal">Integration Evaluation Standards</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Q3 2026 focuses on scale readiness through Android release, QA cadence, UX reliability, and monitoring</li>
-                    <li class="reveal">Q4 2026 focuses on ecosystem distribution through iOS TestFlight, integrations, watch mode, and onboarding</li>
-                    <li class="reveal">Q1 2027 focuses on adoption quality through portfolio view, notifications, contributor program, and retention</li>
-                    <li class="reveal">Q2 2027 focuses on pull validation through deeper integrations, tooling, performance, and demand-led expansion</li>
-                    <li class="reveal">The roadmap is designed to show measurable progress</li>
+                    <li class="reveal"><strong>Security:</strong> permissions, signing flows, dependencies, attack surface, and user risk</li>
+                    <li class="reveal"><strong>User value:</strong> clear problem solved for wallet users</li>
+                    <li class="reveal"><strong>UX coherence:</strong> fit with navigation, flows, and user comprehension</li>
+                    <li class="reveal"><strong>Technical compatibility:</strong> architecture, performance, and regression risk</li>
+                    <li class="reveal"><strong>Maintainability and adoption potential:</strong> ongoing support, partner commitment, usage potential, and return behavior</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -740,6 +751,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Slide A6: Market, Differentiation, and Validator Alignment -->
         <section class="slide" id="slide-6">
@@ -784,13 +797,13 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Market, Differentiation, and Validator Alignment</h2>
+                <h2 class="reveal">Integration Support Levels</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Primary users are crypto-native users, builders, contributors, integrators, and aligned infrastructure users</li>
-                    <li class="reveal">Secondary users include governance communities, wallet tooling developers, and neutral-infrastructure projects</li>
-                    <li class="reveal">Salmon differentiates through open-source code, self-custody, community ownership, transparency, and reliability</li>
-                    <li class="reveal">The active Solana validator strengthens proof of ecosystem alignment</li>
-                    <li class="reveal">The positioning is infrastructure-first, not convenience-first</li>
+                    <li class="reveal"><strong>Experimental:</strong> limited or controlled release to validate feasibility, UX, and demand</li>
+                    <li class="reveal"><strong>Verified:</strong> production-ready integration reviewed for security, UX, compatibility, and maintenance</li>
+                    <li class="reveal"><strong>Featured:</strong> high-value integration with stronger visibility, onboarding, or coordinated partner activation</li>
+                    <li class="reveal">Approval and promotion are <strong>separate decisions</strong></li>
+                    <li class="reveal">Technical inclusion does not automatically mean endorsement or prominent placement</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -800,6 +813,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Slide A7: Go-to-Market Overview -->
         <section class="slide" id="slide-7">
@@ -845,13 +860,13 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Go-to-Market Overview</h2>
+                <h2 class="reveal">Curation Today and Governance Evolution</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Salmon grows through ecosystem integrations rather than broad paid acquisition</li>
-                    <li class="reveal">Developer-first positioning helps it become useful before it tries to become broad</li>
-                    <li class="reveal">Contributor channels and community distribution support credible adoption</li>
-                    <li class="reveal">Technical transparency acts as a trust lever</li>
-                    <li class="reveal">The GTM goal is adoption quality, not vanity volume</li>
+                    <li class="reveal">Today, Salmon is operated by the current team</li>
+                    <li class="reveal">The team owns integration curation and final production approval</li>
+                    <li class="reveal">The objective is <strong>accountable curation, not permissionless production</strong></li>
+                    <li class="reveal">If the MetaDAO raise succeeds, the framework can evolve toward community-owned oversight</li>
+                    <li class="reveal">Governance can shape policies, mandates, priorities, budgets, and escalation without reviewing every pull request</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -861,6 +876,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Slide A8: Token Readiness -->
         <section class="slide" id="slide-8">
             <div class="slide-number">A8</div>
@@ -880,13 +897,13 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Token Readiness</h2>
+                <h2 class="reveal">Product Status</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Proposed ownership coin: Salmon Token</li>
-                    <li class="reveal">Proposed ticker: SAL</li>
-                    <li class="reveal">No existing token or prior TGE are part of the current framing</li>
-                    <li class="reveal">No day-one airdrop or immediate team unlock are planned</li>
-                    <li class="reveal">The performance package is 2.9M SAL subject to cliff, TWAP, and performance-based unlocks</li>
+                    <li class="reveal">Salmon launched in <strong>2023</strong></li>
+                    <li class="reveal">Salmon is live across <strong>browser extension, web wallet, Android, iOS, and public repository</strong></li>
+                    <li class="reveal">The team has completed launch, relaunch, and deep technical refactor</li>
+                    <li class="reveal">Salmon operates an <strong>active Solana validator</strong></li>
+                    <li class="reveal">The next phase is reliability, modular integrations, distribution proof, and governance readiness</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -896,6 +913,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Slide A9: IP, Asset Readiness, and Disclosure Standard -->
         <section class="slide" id="slide-9">
@@ -916,13 +935,14 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">IP, Asset Readiness, and Disclosure Standard</h2>
+                <h2 class="reveal">One Reliable Experience</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Core assets must be compatible with DAO-controlled ownership and governance</li>
-                    <li class="reveal">Priority assets include domains, GitHub, release accounts, infrastructure accounts, brand assets, and contributor rights</li>
-                    <li class="reveal">Launch readiness requires identifying blockers linked to individuals, vendors, or legacy entities</li>
-                    <li class="reveal">Material obligations must be reviewed before launch</li>
-                    <li class="reveal">The standard is no hidden deals, no unclear token promises, and no undisclosed obligations</li>
+                    <li class="reveal">Create or import a wallet</li>
+                    <li class="reveal">Receive funds</li>
+                    <li class="reveal">Send transactions safely</li>
+                    <li class="reveal">Understand and approve signing requests</li>
+                    <li class="reveal">Use the integration that brought them to Salmon</li>
+                    <li class="reveal">Return because the product remains useful and reliable</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -932,6 +952,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Slide A10: Team and Execution Model -->
         <section class="slide" id="slide-10">
@@ -952,13 +974,14 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Team and Execution Model</h2>
+                <h2 class="reveal">Raise Structure</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Nacho Mileo leads product, roadmap prioritization, wallet UX, and ecosystem coordination</li>
-                    <li class="reveal">Angel Mazzarello leads operations, partnerships, use-of-funds discipline, and community accountability</li>
-                    <li class="reveal">Dario Santos leads architecture, security, reliability, integrations, and engineering execution</li>
-                    <li class="reveal">Rodrigo Menendez leads legal structure, IP readiness, contributor rights, disclosures, and governance</li>
-                    <li class="reveal">The operating model is intentionally lean, clearly owned, and burn-disciplined</li>
+                    <li class="reveal"><strong>Minimum Goal:</strong> <strong>$375,000 gross</strong></li>
+                    <li class="reveal"><strong>Estimated net operating capital at minimum:</strong> <strong>approximately $300,000</strong></li>
+                    <li class="reveal"><strong>Fixed Cap:</strong> <strong>$562,500 gross</strong></li>
+                    <li class="reveal"><strong>Estimated net operating capital at fixed cap:</strong> <strong>approximately $450,000</strong></li>
+                    <li class="reveal">Planned net operating spend remains near <strong>$25,000 per month</strong></li>
+                    <li class="reveal">The minimum funds around <strong>12 months</strong>; the fixed cap extends runway to around <strong>18 months</strong></li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -968,6 +991,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Slide A11: Prior Funding and Early Build Support -->
         <section class="slide" id="slide-11">
@@ -987,13 +1012,274 @@
                 </svg>
             </div>
             <div class="slide-content">
+                <h2 class="reveal">Net Operating Budget</h2>
+                <ul class="bullet-list">
+                    <li class="reveal"><strong>Team:</strong> approximately <strong>$18,300/month</strong></li>
+                    <li class="reveal"><strong>Infrastructure:</strong> approximately <strong>$4,200/month</strong></li>
+                    <li class="reveal"><strong>Growth &amp; Ecosystem:</strong> approximately <strong>$2,000/month</strong></li>
+                    <li class="reveal"><strong>Governance, Legal &amp; Contingency:</strong> approximately <strong>$500/month</strong></li>
+                    <li class="reveal"><strong>Total planned net operating spend:</strong> approximately <strong>$25,000/month</strong></li>
+                    <li class="reveal">The budget supports core wallet reliability and integration-led distribution testing</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Slide A12: Roadmap Detail -->
+        <section class="slide" id="slide-12">
+            <div class="slide-number">A12</div>
+            <div class="slide-accent A-accent-4">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="Ablur12" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter></defs>
+                    <g filter="url(#Ablur12)">
+                        <circle cx="200" cy="210" r="125" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.2"/>
+                        <circle cx="200" cy="210" r="85" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.28"/>
+                        <path d="M110,280 Q160,170 230,210 T330,110" stroke="#FF5C45" stroke-width="10" fill="none" opacity="0.42" stroke-linecap="round"/>
+                        <circle cx="110" cy="280" r="20" fill="#FF5C45" opacity="0.36"/>
+                        <circle cx="230" cy="210" r="24" fill="#FF5C45" opacity="0.42"/>
+                        <circle cx="330" cy="110" r="28" fill="#FF5C45" opacity="0.5"/>
+                        <rect x="100" y="105" width="210" height="240" rx="24" fill="#FF5C45" opacity="0.06"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">Roadmap Detail</h2>
+                <ul class="bullet-list">
+                    <li class="reveal"><strong>Q4 2026 — Scale Readiness:</strong> reliability, security, QA, release cadence, onboarding, and integration framework</li>
+                    <li class="reveal"><strong>Q1 2027 — Ecosystem Distribution:</strong> selected integrations, partner activation paths, and measurement infrastructure</li>
+                    <li class="reveal"><strong>Q2 2027 — Adoption Quality:</strong> retention, return behavior, product depth, and integration performance</li>
+                    <li class="reveal"><strong>Q3 2027 — Pull Validation:</strong> repeat partner demand, reusable integration patterns, and evidence-based scale decisions</li>
+                    <li class="reveal">Each phase reduces a specific execution risk before broader expansion</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Slide A13: Measurement Framework -->
+        <section class="slide" id="slide-13">
+            <div class="slide-number">A13</div>
+            <div class="slide-accent A-accent-4">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="Ablur13" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter></defs>
+                    <g filter="url(#Ablur13)">
+                        <circle cx="200" cy="210" r="125" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.2"/>
+                        <circle cx="200" cy="210" r="85" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.28"/>
+                        <path d="M110,280 Q160,170 230,210 T330,110" stroke="#FF5C45" stroke-width="10" fill="none" opacity="0.42" stroke-linecap="round"/>
+                        <circle cx="110" cy="280" r="20" fill="#FF5C45" opacity="0.36"/>
+                        <circle cx="230" cy="210" r="24" fill="#FF5C45" opacity="0.42"/>
+                        <circle cx="330" cy="110" r="28" fill="#FF5C45" opacity="0.5"/>
+                        <rect x="100" y="105" width="210" height="240" rx="24" fill="#FF5C45" opacity="0.06"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">Measurement Framework</h2>
+                <ul class="bullet-list">
+                    <li class="reveal"><strong>Partner funnel:</strong> applications, qualified proposals, integrations started, integrations launched</li>
+                    <li class="reveal"><strong>User activation:</strong> users arriving by integration, wallet creation/import, first successful action</li>
+                    <li class="reveal"><strong>Return behavior:</strong> repeat wallet usage, repeat integration usage, retained cohorts</li>
+                    <li class="reveal"><strong>Integration performance:</strong> completed actions, partner feedback, maintenance status, expansion requests</li>
+                    <li class="reveal"><strong>Ecosystem pull:</strong> partner referrals, contributor activity, demand for reusable integration tooling</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Slide A14: GTM and Distribution Logic -->
+        <section class="slide" id="slide-14">
+            <div class="slide-number">A14</div>
+            <div class="slide-accent A-accent-4">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="Ablur14" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter></defs>
+                    <g filter="url(#Ablur14)">
+                        <circle cx="200" cy="210" r="125" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.2"/>
+                        <circle cx="200" cy="210" r="85" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.28"/>
+                        <path d="M110,280 Q160,170 230,210 T330,110" stroke="#FF5C45" stroke-width="10" fill="none" opacity="0.42" stroke-linecap="round"/>
+                        <circle cx="110" cy="280" r="20" fill="#FF5C45" opacity="0.36"/>
+                        <circle cx="230" cy="210" r="24" fill="#FF5C45" opacity="0.42"/>
+                        <circle cx="330" cy="110" r="28" fill="#FF5C45" opacity="0.5"/>
+                        <rect x="100" y="105" width="210" height="240" rx="24" fill="#FF5C45" opacity="0.06"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">GTM and Distribution Logic</h2>
+                <ul class="bullet-list">
+                    <li class="reveal">Salmon grows first through <strong>selected partner integrations</strong></li>
+                    <li class="reveal">Partner communities and existing use cases provide initial distribution</li>
+                    <li class="reveal">Builders and contributors improve credibility and implementation capacity</li>
+                    <li class="reveal">Public code, visible progress, and integration metrics support trust</li>
+                    <li class="reveal">Salmon avoids broad paid acquisition before proving repeatable activation and retention</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Slide A15: Token and Governance Readiness -->
+        <section class="slide" id="slide-15">
+            <div class="slide-number">A15</div>
+            <div class="slide-accent A-accent-4">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="Ablur15" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter></defs>
+                    <g filter="url(#Ablur15)">
+                        <circle cx="200" cy="210" r="125" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.2"/>
+                        <circle cx="200" cy="210" r="85" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.28"/>
+                        <path d="M110,280 Q160,170 230,210 T330,110" stroke="#FF5C45" stroke-width="10" fill="none" opacity="0.42" stroke-linecap="round"/>
+                        <circle cx="110" cy="280" r="20" fill="#FF5C45" opacity="0.36"/>
+                        <circle cx="230" cy="210" r="24" fill="#FF5C45" opacity="0.42"/>
+                        <circle cx="330" cy="110" r="28" fill="#FF5C45" opacity="0.5"/>
+                        <rect x="100" y="105" width="210" height="240" rx="24" fill="#FF5C45" opacity="0.06"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">Token and Governance Readiness</h2>
+                <ul class="bullet-list">
+                    <li class="reveal">Proposed ownership coin: <strong>SALMON</strong></li>
+                    <li class="reveal">No existing token or prior TGE is part of the proposed setup</li>
+                    <li class="reveal">No day-one airdrop or immediate team unlock is planned</li>
+                    <li class="reveal">Proposed performance package: <strong>2.9M SALMON</strong></li>
+                    <li class="reveal">The package is subject to <strong>18-month cliff, 3-month TWAP, and performance brackets</strong></li>
+                    <li class="reveal">Governance and token language must remain aligned with the final MetaDAO and legal structure</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Slide A16: IP, Asset Readiness, and Disclosure Standards -->
+        <section class="slide" id="slide-16">
+            <div class="slide-number">A16</div>
+            <div class="slide-accent A-accent-4">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="Ablur16" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter></defs>
+                    <g filter="url(#Ablur16)">
+                        <circle cx="200" cy="210" r="125" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.2"/>
+                        <circle cx="200" cy="210" r="85" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.28"/>
+                        <path d="M110,280 Q160,170 230,210 T330,110" stroke="#FF5C45" stroke-width="10" fill="none" opacity="0.42" stroke-linecap="round"/>
+                        <circle cx="110" cy="280" r="20" fill="#FF5C45" opacity="0.36"/>
+                        <circle cx="230" cy="210" r="24" fill="#FF5C45" opacity="0.42"/>
+                        <circle cx="330" cy="110" r="28" fill="#FF5C45" opacity="0.5"/>
+                        <rect x="100" y="105" width="210" height="240" rx="24" fill="#FF5C45" opacity="0.06"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">IP, Asset Readiness, and Disclosure Standards</h2>
+                <ul class="bullet-list">
+                    <li class="reveal">Core assets should be capable of aligning with DAO governance if the raise succeeds</li>
+                    <li class="reveal">Priority assets include brand, domains, GitHub, release accounts, infrastructure accounts, validator-related rights, and contributor rights</li>
+                    <li class="reveal">Launch readiness requires identifying dependencies tied to individuals, vendors, or legacy entities</li>
+                    <li class="reveal">Material obligations should be disclosed before launch</li>
+                    <li class="reveal">The standard is <strong>no hidden agreements, no unclear token promises, and no undisclosed asset restrictions</strong></li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Slide A17: Team and Execution Model -->
+        <section class="slide" id="slide-17">
+            <div class="slide-number">A17</div>
+            <div class="slide-accent A-accent-4">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="Ablur17" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter></defs>
+                    <g filter="url(#Ablur17)">
+                        <circle cx="200" cy="210" r="125" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.2"/>
+                        <circle cx="200" cy="210" r="85" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.28"/>
+                        <path d="M110,280 Q160,170 230,210 T330,110" stroke="#FF5C45" stroke-width="10" fill="none" opacity="0.42" stroke-linecap="round"/>
+                        <circle cx="110" cy="280" r="20" fill="#FF5C45" opacity="0.36"/>
+                        <circle cx="230" cy="210" r="24" fill="#FF5C45" opacity="0.42"/>
+                        <circle cx="330" cy="110" r="28" fill="#FF5C45" opacity="0.5"/>
+                        <rect x="100" y="105" width="210" height="240" rx="24" fill="#FF5C45" opacity="0.06"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="slide-content">
+                <h2 class="reveal">Team and Execution Model</h2>
+                <ul class="bullet-list">
+                    <li class="reveal"><strong>Nacho Mileo:</strong> product direction, roadmap prioritization, wallet UX, and partner coordination</li>
+                    <li class="reveal"><strong>Angel Mazzarello:</strong> operations, partnerships, use-of-funds discipline, and community accountability</li>
+                    <li class="reveal"><strong>Dario Santos:</strong> architecture, security, reliability, integrations, and engineering execution</li>
+                    <li class="reveal"><strong>Rodrigo Menendez:</strong> legal structure, IP readiness, contributor rights, disclosures, and governance preparation</li>
+                    <li class="reveal">The operating model is lean, clearly owned, and aligned with the planned burn</li>
+                </ul>
+                <div class="slide-footer">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
+                        class="footer-icon" alt="Icon">
+                    <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75"
+                        class="footer-text" alt="Salmon">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Slide A18: Prior Funding and Early Build Support -->
+        <section class="slide" id="slide-18">
+            <div class="slide-number">A18</div>
+            <div class="slide-accent A-accent-4">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="Ablur18" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter></defs>
+                    <g filter="url(#Ablur18)">
+                        <circle cx="200" cy="210" r="125" fill="none" stroke="#FF5C45" stroke-width="3" opacity="0.2"/>
+                        <circle cx="200" cy="210" r="85" fill="none" stroke="#FF5C45" stroke-width="4" opacity="0.28"/>
+                        <path d="M110,280 Q160,170 230,210 T330,110" stroke="#FF5C45" stroke-width="10" fill="none" opacity="0.42" stroke-linecap="round"/>
+                        <circle cx="110" cy="280" r="20" fill="#FF5C45" opacity="0.36"/>
+                        <circle cx="230" cy="210" r="24" fill="#FF5C45" opacity="0.42"/>
+                        <circle cx="330" cy="110" r="28" fill="#FF5C45" opacity="0.5"/>
+                        <rect x="100" y="105" width="210" height="240" rx="24" fill="#FF5C45" opacity="0.06"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="slide-content">
                 <h2 class="reveal">Prior Funding and Early Build Support</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Bootstrapped funding: $80,000 in 2022</li>
-                    <li class="reveal">Grants: Serum $2,500 and Eclipse $40,000</li>
-                    <li class="reveal">These resources helped absorb early build risk</li>
-                    <li class="reveal">The current raise is aimed at the next stage, not the initial build</li>
-                    <li class="reveal">That next stage is scale readiness, reliability, mobile parity, integrations, and ecosystem pull</li>
+                    <li class="reveal"><strong>Bootstrapped funding:</strong> approximately <strong>$80,000</strong></li>
+                    <li class="reveal"><strong>Serum grant:</strong> <strong>$2,500</strong></li>
+                    <li class="reveal"><strong>Eclipse grant:</strong> <strong>$40,000</strong></li>
+                    <li class="reveal">Prior resources helped absorb early product and technical risk</li>
+                    <li class="reveal">The current raise funds reliability, integrations, distribution proof, and governance readiness</li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
