@@ -268,6 +268,84 @@
             top: 0;
         }
 
+        .bullet-list .flow-item {
+            padding-left: 0;
+            margin-top: 1.2rem;
+        }
+
+        .bullet-list .flow-item::before {
+            content: none;
+        }
+
+        .flow-diagram {
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            gap: clamp(0.3rem, 0.75vw, 0.7rem);
+        }
+
+        .flow-step {
+            flex: 1 1 0;
+            min-width: 0;
+            min-height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 0.65rem;
+            border: 1px solid rgba(255, 92, 69, 0.42);
+            border-radius: 0.8rem;
+            background: linear-gradient(145deg, rgba(255, 92, 69, 0.16), rgba(255, 255, 255, 0.035));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 10px 28px rgba(0, 0, 0, 0.16);
+            color: var(--text-primary);
+            font-size: clamp(0.72rem, 1.15vw, 1rem);
+            font-weight: 750;
+            line-height: 1.15;
+            text-align: center;
+        }
+
+        .flow-step:first-child,
+        .flow-step:last-child {
+            border-color: rgba(255, 92, 69, 0.75);
+            background: linear-gradient(145deg, rgba(255, 92, 69, 0.28), rgba(255, 92, 69, 0.08));
+        }
+
+        .flow-arrow {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            color: var(--brand-salmon);
+            font-size: clamp(1rem, 1.6vw, 1.45rem);
+            font-weight: 900;
+            filter: drop-shadow(0 0 8px rgba(255, 92, 69, 0.35));
+        }
+
+        #slide-10 .bullet-list {
+            gap: 1rem;
+        }
+
+        #slide-10 .flow-item {
+            margin-top: 0.8rem;
+        }
+
+        #slide-10 .flow-step {
+            min-height: 3.4rem;
+        }
+
+        @media (max-width: 760px) {
+            .flow-diagram {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .flow-arrow {
+                display: none;
+            }
+
+            .flow-step {
+                min-height: 3rem;
+            }
+        }
+
         .slide-number {
             position: absolute;
             top: 3rem;
@@ -821,7 +899,7 @@
                 <ul class="bullet-list">
                     <li class="reveal">Each selected integration gives users a concrete reason to discover and use Salmon</li>
                     <li class="reveal">Partners gain a path to users; Salmon gains adopters through real use cases</li>
-                    <li class="reveal">The loop is simple: <strong>partner demand → integration → activation → repeat usage → distribution proof</strong></li>
+                    <li class="reveal flow-item"><div class="flow-diagram" role="img" aria-label="partner demand → integration → activation → repeat usage → distribution proof"><span class="flow-step">partner demand</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">integration</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">activation</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">repeat usage</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">distribution proof</span></div></li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -932,7 +1010,7 @@
                 <ul class="bullet-list">
                     <li class="reveal">Projects can apply through an open process with use case, technical scope, user value, and distribution hypothesis</li>
                     <li class="reveal">Salmon qualifies integrations through standards: <strong>security, UX coherence, compatibility, maintainability, and adoption potential</strong></li>
-                    <li class="reveal">Selected projects move through: <strong>Apply → Qualify → Build → Validate → Launch → Measure</strong></li>
+                    <li class="reveal flow-item"><div class="flow-diagram" role="img" aria-label="Apply → Qualify → Build → Validate → Launch → Measure"><span class="flow-step">Apply</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">Qualify</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">Build</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">Validate</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">Launch</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">Measure</span></div></li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"
@@ -1040,7 +1118,7 @@
             <div class="slide-content">
                 <h2 class="reveal">Salmon Has Already Absorbed the Initial Build Risk</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Salmon launched in <strong>2023</strong> and is live across <strong>extension, web wallet, Android, iOS (TestFlight), and public repository</strong></li>
+                    <li class="reveal">Salmon launched in <strong>2023</strong> and is live across <strong>extension, web wallet, Android, iOS, and public repository</strong></li>
                     <li class="reveal">The team has completed launch, relaunch, and deep technical refactor</li>
                     <li class="reveal">Salmon also operates an <strong>active Solana validator</strong></li>
                 </ul>
@@ -1153,11 +1231,12 @@
                 </svg>
             </div>
             <div class="slide-content">
-                <h2 class="reveal">Salmon Structures the Raise Around Operating Discipline</h2>
+                <h2 class="reveal">Salmon Raises $450K to Fund a Defined 12-Month Plan</h2>
                 <ul class="bullet-list">
-                    <li class="reveal"><strong>Minimum Goal:</strong> <strong>$375,000 gross / approximately $300,000 net</strong>, funding around 12 months</li>
-                    <li class="reveal"><strong>Fixed Cap:</strong> <strong>$562,500 gross / approximately $450,000 net</strong>, extending runway to around 18 months</li>
-                    <li class="reveal">Planned net operating spend remains near <strong>$25,000 per month</strong></li>
+                    <li class="reveal"><strong>$450K gross raise</strong> provides approximately <strong>$360K of operating capital</strong> after liquidity provision</li>
+                    <li class="reveal">Salmon plans around a <strong>$30K monthly operating budget</strong> for a defined <strong>12-month execution plan</strong></li>
+                    <li class="reveal">If demand exceeds the target, Salmon will evaluate additional capital selectively based on execution needs and runway efficiency</li>
+                    <li class="reveal flow-item"><div class="flow-diagram" role="img" aria-label="reliability → Powerups → activation → repeat usage → distribution proof"><span class="flow-step">reliability</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">Powerups</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">activation</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">repeat usage</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">distribution proof</span></div></li>
                 </ul>
                 <div class="slide-footer">
                     <img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75"

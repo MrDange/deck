@@ -64,11 +64,12 @@
 
 ---
 
-### **Slide 9: Salmon Structures the Raise Around Operating Discipline**
+### **Slide 9: Salmon Raises $450K to Fund a Defined 12-Month Plan**
 
-* **Minimum Goal:** **$375,000 gross / approximately $300,000 net**, funding around 12 months
-* **Fixed Cap:** **$562,500 gross / approximately $450,000 net**, extending runway to around 18 months
-* Planned net operating spend remains near **$25,000 per month**
+* **$450K gross raise** provides approximately **$360K of operating capital** after liquidity provision
+* Salmon plans around a **$30K monthly operating budget** for a defined **12-month execution plan**
+* If demand exceeds the target, Salmon will evaluate additional capital selectively based on execution needs and runway efficiency
+* Capital funds the path from **reliability → Powerups → activation → repeat usage → distribution proof**
 
 ---
 
@@ -193,23 +194,23 @@ Users should be able to:
 
 ## **A10: Raise Structure**
 
-* **Minimum Goal:** **$375,000 gross**
-* **Estimated net operating capital at minimum:** **approximately $300,000**
-* **Fixed Cap:** **$562,500 gross**
-* **Estimated net operating capital at fixed cap:** **approximately $450,000**
-* Planned net operating spend remains near **$25,000 per month**
-* The minimum funds around **12 months**; the fixed cap extends runway to around **18 months**
+* **Target Raise: $450,000 gross**
+* Approximately **$360,000** is intended for operating capital after liquidity provision
+* **Monthly operating budget: $30,000**
+* The raise funds a defined **12-month execution plan**
+* If demand exceeds the target, Salmon may selectively accept additional capital where it materially strengthens execution or runway efficiency
 
 ---
 
-## **A11: Net Operating Budget**
+## **A11: Monthly Operating Budget**
 
-* **Team:** approximately **$18,300/month**
-* **Infrastructure:** approximately **$4,200/month**
-* **Growth & Ecosystem:** approximately **$2,000/month**
-* **Governance, Legal & Contingency:** approximately **$500/month**
-* **Total planned net operating spend:** approximately **$25,000/month**
-* The budget supports core wallet reliability and integration-led distribution testing
+* **Team & Product:** **70%**
+* **Infrastructure, Security & SaaS:** **10%**
+* **Powerups & Integrations:** **7%**
+* **Community & Distribution:** **7%**
+* **Legal, Accounting & Governance:** **6%**
+* **Total monthly operating budget:** **$30,000**
+* The allocation is indicative and may vary between categories based on operating needs while remaining within the approved monthly budget.
 
 ---
 

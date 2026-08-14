@@ -57,9 +57,25 @@ function replaceSlideCopy(html, slides) {
   );
 }
 
+function renderArrowFlows(html) {
+  return html.replace(
+    /<li class="reveal">([^<]*?)<strong>([^<]*→[^<]*)<\/strong><\/li>/g,
+    (_match, _intro, sequence) => {
+      const steps = sequence
+        .split('→')
+        .map((step) => step.trim())
+        .filter(Boolean)
+        .map((step) => `<span class="flow-step">${step}</span>`)
+        .join('<span class="flow-arrow" aria-hidden="true">→</span>');
+      return `<li class="reveal flow-item"><div class="flow-diagram" role="img" aria-label="${sequence.trim()}">${steps}</div></li>`;
+    },
+  );
+}
+
 const mainPath = path.join(root, 'index.html');
 let mainHtml = fs.readFileSync(mainPath, 'utf8');
 mainHtml = replaceSlideCopy(mainHtml, mainSlides);
+mainHtml = renderArrowFlows(mainHtml);
 mainHtml = mainHtml
   .replace('<p style="padding-top: 10px;">Open Wallet Infrastructure</p>', '<p style="padding-top: 10px;">Integrations into distribution</p>')
   .replace('Salmon Wallet — Community-Owned Wallet Deck', 'Salmon Wallet — Investor Deck')
