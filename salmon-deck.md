@@ -64,28 +64,30 @@
 
 ---
 
-### **Slide 9: Salmon Raises $450K to Fund a Defined 12-Month Plan**
+### **Slide 9: Defined 12-Month Plan**
 
-* **$450K gross raise** provides approximately **$360K of operating capital** after liquidity provision
-* Salmon plans around a **$30K monthly operating budget** for a defined **12-month execution plan**
-* If demand exceeds the target, Salmon will evaluate additional capital selectively based on execution needs and runway efficiency
+* **$450K gross** provides approximately **$360K of operating capital** after liquidity provision
+* A **~$30K monthly budget** funds reliability, the Powerup foundation, and ecosystem integrations
+* The 12-month phase is designed to generate measurable evidence of adoption, retention, and ecosystem pull
 * Capital funds the path from **reliability → Powerups → activation → repeat usage → distribution proof**
+* If demand exceeds the target, Salmon will evaluate additional capital selectively based on execution needs and runway efficiency
 
 ---
 
 ### **Slide 10: Salmon Funds Core Reliability and Scale-Enabling Work**
 
-* Core wallet maintenance keeps extension, web, Android, and iOS reliable, secure, and operational
-* Scale-enabling work funds the integration framework, partner onboarding, activation tracking, and public evidence of usage
-* Capital protects the existing product while testing whether integrations can become repeatable distribution
+* Keep extension, web, Android, and iOS reliable, secure, and operational
+* Build the Powerup foundation and essential capabilities needed for a useful modular wallet
+* Enable selected integrations, partner onboarding, and the measurement infrastructure needed to test repeatable adoption
 
 ---
 
 ### **Slide 11: Salmon Measures Progress Through Usage, Not Announcements**
 
-* Salmon measures onboarding, completed actions, return usage, retained cohorts, and partner feedback by integration
-* The roadmap moves from **scale readiness** to **ecosystem distribution** to **adoption quality** to **pull validation**
-* Salmon expands what proves activation and stops investing in what does not
+* **Adoption & retention:** active wallets, activation, return usage, and retained cohorts
+* **Powerup & ecosystem behavior:** installs, repeat usage, rotation, integrations, and partner-driven adoption
+* **Economic signals:** transaction activity, fees, and revenue measured from day one
+* Early performance is evaluated across product behavior, ecosystem pull, and economic activity — not through any single market-sensitive metric.
 
 ---
 
@@ -196,8 +198,9 @@ Users should be able to:
 
 * **Target Raise: $450,000 gross**
 * Approximately **$360,000** is intended for operating capital after liquidity provision
-* **Monthly operating budget: $30,000**
-* The raise funds a defined **12-month execution plan**
+* **Monthly operating budget: approximately $30,000**
+* The raise funds Salmon's next **12-month execution phase**
+* This phase is designed to strengthen the wallet core, establish the Powerup model, and generate measurable evidence of adoption, retention, and ecosystem pull
 * If demand exceeds the target, Salmon may selectively accept additional capital where it materially strengthens execution or runway efficiency
 
 ---
@@ -216,21 +219,23 @@ Users should be able to:
 
 ## **A12: Roadmap Detail**
 
-* **Q4 2026 — Scale Readiness:** reliability, security, QA, release cadence, onboarding, and integration framework
-* **Q1 2027 — Ecosystem Distribution:** selected integrations, partner activation paths, and measurement infrastructure
-* **Q2 2027 — Adoption Quality:** retention, return behavior, product depth, and integration performance
-* **Q3 2027 — Pull Validation:** repeat partner demand, reusable integration patterns, and evidence-based scale decisions
-* Each phase reduces a specific execution risk before broader expansion
+* **Q4 2026 — Scale Readiness:** reliability, security, QA, release cadence, onboarding, and Powerup framework
+* **Q1 2027 — Powerup & Ecosystem Distribution:** core Powerups, selected integrations, partner activation paths, and measurement infrastructure
+* **Q2 2027 — Adoption Quality:** retention, return behavior, Powerup usage, product depth, and integration performance
+* **Q3 2027 — Pull Validation:** repeat partner demand, reusable integration patterns, Powerup behavior, and evidence-based scale decisions
+* Each phase reduces a specific execution risk before broader expansion. The roadmap is designed to accumulate evidence across product adoption, user behavior, ecosystem demand, and economic activity.
 
 ---
 
 ## **A13: Measurement Framework**
 
-* **Partner funnel:** applications, qualified proposals, integrations started, integrations launched
-* **User activation:** users arriving by integration, wallet creation/import, first successful action
-* **Return behavior:** repeat wallet usage, repeat integration usage, retained cohorts
-* **Integration performance:** completed actions, partner feedback, maintenance status, expansion requests
-* **Ecosystem pull:** partner referrals, contributor activity, demand for reusable integration tooling
+* **Wallet adoption:** active wallets, new active wallets, activation, return usage, and retained cohorts
+* **Powerup behavior:** discovery, installations, first use, repeat use, removals, rotation between Powerups, and wallet retention by Powerup cohort
+* **Partner funnel:** applications, qualified proposals, integrations started, integrations launched, and repeat partner demand
+* **Integration performance:** users arriving by integration, completed actions, repeat usage, partner feedback, maintenance status, and expansion requests
+* **Ecosystem pull:** partner referrals, contributor activity, demand for reusable integration tooling, and partner-driven adoption
+* **Economic signals:** transaction volume attributable to Powerups, fees generated, early revenue, and revenue per active wallet
+* Salmon evaluates product progress through behavior-based, ecosystem, and economic metrics together, reducing dependence on any single measure that may be amplified or suppressed by short-term market conditions.
 
 ---
 
