@@ -1,34 +1,38 @@
-##  **Investor Deck**
+#  **Investor Deck**
 
-### **Slide 1: Salmon Turns Selected Integrations into Distribution**
+## **Slide 1: Open Wallet Infrastructure**
 
-* Salmon builds **open wallet infrastructure** for partners that need a credible path to users
-* The wedge is clear: **selected integrations become activation, usage, and distribution**
-* Salmon is **open-source, self-custodial, lightweight, and community-driven**
+**Lightweight by design. Powerups turn integrations into distribution.**
 
----
+* Salmon starts lightweight and lets users activate only the capabilities they need
+* Powerups add functionality without permanently expanding the wallet core
+* Selected integrations create a measurable route from useful capability to activation and repeat usage
 
-### **Slide 2: Solana Projects Need More Than Visibility**
+  ---
 
-* Strong projects can still struggle to reach active users
-* Listings, announcements, and technical support do not automatically create adoption
-* Partners need **activation, feedback, repeat usage, and measurable traction**
+## **Slide 2: Wallets Should Expand Without Becoming Heavy**
 
----
+* Users should not have to carry every feature a wallet may support
+* Permanent feature accumulation increases complexity, friction, and security surface
+* Salmon keeps the core focused while optional Powerups expand the experience
+  ---
 
-### **Slide 3: Salmon Uses Integrations as Its Adoption Strategy**
+## **Slide 3: Powerups Create a Second Opportunity: Distribution**
 
-* Each selected integration gives users a concrete reason to discover and use Salmon
-* Partners gain a path to users; Salmon gains adopters through real use cases
-* The loop is simple: **partner demand → integration → activation → repeat usage → distribution proof**
+* Strong Solana projects can still struggle to turn visibility into active users
+* Selected projects can reach users through useful Powerups inside the wallet
+* Salmon gains adoption while partners gain activation, feedback, and measurable usage
+  ---
 
----
+## **Slide 4: One Architecture Connects Both Sides**
 
-### **Slide 4: Salmon Keeps the Wallet Lightweight Through Modularity**
+* Users get a wallet that adapts to their needs without permanent feature accumulation
+* Partners gain a structured route to users through selected Powerups
+* Both sides reinforce the same loop: useful capability → activation → repeat usage → distribution proof
 
-* Salmon should not become a heavy super-app filled with permanent features
-* The core wallet stays focused on **custody, signing, safety, and reliable interaction**
-* Modular integrations — **Powerups** — expand what users can do when they solve a real problem
+**User demand → Powerup → Useful action → Repeat usage**
+
+**Partner demand → Powerup → User activation → Repeat usage → Distribution proof**
 
 ---
 
@@ -48,37 +52,39 @@
 
 ---
 
-### **Slide 7: Salmon Has Already Absorbed the Initial Build Risk**
+## **Slide 7: Salmon Has Already Absorbed the Initial Build Risk**
 
-* Salmon launched in **2023** and is live across **extension, web wallet, Android, iOS, and public repository**
-* The team has completed launch, relaunch, and deep technical refactor
-* Salmon also operates an **active Solana validator**
-
----
-
-### **Slide 8: Salmon Prioritizes One Reliable Experience People Actually Use**
-
-* Users should be able to **create/import, receive, send, sign safely, and use the integration that brought them**
-* Reliability, security, and UX consistency matter more than feature accumulation
-* If integrations do not create repeatable usage, the distribution thesis is not proven
+* Salmon launched in 2023 and is live across extension, web wallet, Android, iOS, and a public repository
+* The team has completed launch, relaunch, and a deep technical refactor; Salmon also operates an active Solana validator
+* Current adoption is still early — the raise funds the next test: whether Powerups and selected integrations can create repeatable usage
 
 ---
 
-### **Slide 9: Defined 12-Month Plan**
+## **Slide 8: Powerups Create Multiple Paths to Sustainable Wallet Economics**
 
-* **$450K gross** provides approximately **$360K of operating capital** after liquidity provision
-* A **~$30K monthly budget** funds reliability, the Powerup foundation, and ecosystem integrations
-* The 12-month phase is designed to generate measurable evidence of adoption, retention, and ecosystem pull
-* Capital funds the path from **reliability → Powerups → activation → repeat usage → distribution proof**
-* If demand exceeds the target, Salmon will evaluate additional capital selectively based on execution needs and runway efficiency
+* Swaps, bridges, staking, ramps, and selected integrations can generate modular revenue streams
+* Salmon already has an economic contribution through its active Solana validator
+* Revenue is measured from day one, but the 12-month operating plan does not depend on a revenue forecast
 
 ---
 
-### **Slide 10: Salmon Funds Core Reliability and Scale-Enabling Work**
+## **Slide 9: Salmon Raises $450K for Its Next 12-Month Execution Phase**
 
-* Keep extension, web, Android, and iOS reliable, secure, and operational
-* Build the Powerup foundation and essential capabilities needed for a useful modular wallet
-* Enable selected integrations, partner onboarding, and the measurement infrastructure needed to test repeatable adoption
+* $450K gross provides approximately $360K of base DAO treasury after liquidity provision, supporting a \~$30K initial monthly allowance
+* Salmon’s Solana validator, approved in June 2026 and generating growing revenue, adds an existing revenue stream alongside the raise
+* Net validator revenue attributable to Salmon will flow to the DAO treasury, reducing net treasury depletion and potentially extending runway
+
+**Capital funds the path from Powerups → activation → repeat usage → distribution proof, while existing validator revenue strengthens treasury efficiency.**
+
+*If demand exceeds the target, Salmon will evaluate additional capital selectively based on execution needs and runway efficiency.*
+
+---
+
+## **Slide 10: Capital Makes the Powerup Model Operational**
+
+* Build and progressively release the first practical Powerups
+* Create the partner qualification, launch, and measurement framework
+* Build the analytics needed to distinguish attention from activation and recurring usage
 
 ---
 
@@ -87,7 +93,8 @@
 * **Adoption & retention:** active wallets, activation, return usage, and retained cohorts
 * **Powerup & ecosystem behavior:** installs, repeat usage, rotation, integrations, and partner-driven adoption
 * **Economic signals:** transaction activity, fees, and revenue measured from day one
-* Early performance is evaluated across product behavior, ecosystem pull, and economic activity — not through any single market-sensitive metric.
+
+**Early performance is evaluated across product behavior, ecosystem pull, and economic activity — not through any single market-sensitive metric.**
 
 ---
 
@@ -196,34 +203,37 @@ Users should be able to:
 
 ## **A10: Raise Structure**
 
-* **Target Raise: $450,000 gross**
-* Approximately **$360,000** is intended for operating capital after liquidity provision
-* **Monthly operating budget: approximately $30,000**
-* The raise funds Salmon's next **12-month execution phase**
+* Target Raise: $450,000 gross
+* Approximately $360,000 is intended for operating capital after liquidity provision
+* Monthly operating budget: approximately $30,000
+* The raise funds Salmon's next 12-month execution phase
 * This phase is designed to strengthen the wallet core, establish the Powerup model, and generate measurable evidence of adoption, retention, and ecosystem pull
 * If demand exceeds the target, Salmon may selectively accept additional capital where it materially strengthens execution or runway efficiency
+
 
 ---
 
 ## **A11: Monthly Operating Budget**
 
-* **Team & Product:** **70%**
-* **Infrastructure, Security & SaaS:** **10%**
-* **Powerups & Integrations:** **7%**
-* **Community & Distribution:** **7%**
-* **Legal, Accounting & Governance:** **6%**
-* **Total monthly operating budget:** **$30,000**
-* The allocation is indicative and may vary between categories based on operating needs while remaining within the approved monthly budget.
+* **Team & Product:** 70%
+* **Infrastructure, Security & SaaS:** 10%
+* **Powerups & Integrations:** 7%
+* **Community & Distribution:** 7%
+* **Legal, Accounting & Governance:** 6%
+* **Total monthly operating budget:** $30,000
+
+The allocation is indicative and may vary between categories based on operating needs while remaining within the approved monthly budget.
 
 ---
 
 ## **A12: Roadmap Detail**
 
-* **Q4 2026 — Scale Readiness:** reliability, security, QA, release cadence, onboarding, and Powerup framework
-* **Q1 2027 — Powerup & Ecosystem Distribution:** core Powerups, selected integrations, partner activation paths, and measurement infrastructure
-* **Q2 2027 — Adoption Quality:** retention, return behavior, Powerup usage, product depth, and integration performance
-* **Q3 2027 — Pull Validation:** repeat partner demand, reusable integration patterns, Powerup behavior, and evidence-based scale decisions
-* Each phase reduces a specific execution risk before broader expansion. The roadmap is designed to accumulate evidence across product adoption, user behavior, ecosystem demand, and economic activity.
+* **Q4 2026 —** Powerup Foundation & First Releases: implement the Powerup framework, move the first core Powerups through testing and staged release, and begin measuring usage
+* **Q1 2027 —** Core Powerup Expansion: progressively release additional priority Powerups and iterate based on usage, technical performance, and feedback
+* **Q2 2027 —** Usage & Integration Validation: improve recurring usage, onboard selected ecosystem integrations, and measure partner-driven activity and early economic signals
+* **Q3 2027 —** Distribution Evidence & Scale Decisions: evaluate Powerups, integrations, transaction activity, fees, validator contribution, and early revenue to determine what deserves deeper investment
+
+**Each phase moves from controlled product execution toward measurable product, distribution, and economic evidence.**
 
 ---
 
@@ -235,7 +245,8 @@ Users should be able to:
 * **Integration performance:** users arriving by integration, completed actions, repeat usage, partner feedback, maintenance status, and expansion requests
 * **Ecosystem pull:** partner referrals, contributor activity, demand for reusable integration tooling, and partner-driven adoption
 * **Economic signals:** transaction volume attributable to Powerups, fees generated, early revenue, and revenue per active wallet
-* Salmon evaluates product progress through behavior-based, ecosystem, and economic metrics together, reducing dependence on any single measure that may be amplified or suppressed by short-term market conditions.
+
+**Salmon evaluates product progress through behavior-based, ecosystem, and economic metrics together, reducing dependence on any single measure that may be amplified or suppressed by short-term market conditions.**
 
 ---
 
@@ -254,9 +265,12 @@ Users should be able to:
 * Proposed ownership coin: **SALMON**
 * No existing token or prior TGE is part of the proposed setup
 * No day-one airdrop or immediate team unlock is planned
-* Proposed performance package: **2.9M SALMON**
-* The package is subject to **18-month cliff, 3-month TWAP, and performance brackets**
+* Proposed team performance package: **5M SALMON**
+* The package is subject to an **18-month cliff, 3-month TWAP, and performance brackets at 2x / 4x / 8x / 16x / 32x**
+* Tranche allocation: **0.5M / 0.75M / 1M / 1.25M / 1.5M SALMON**
+* Higher performance brackets unlock progressively larger portions of the package
 * Governance and token language must remain aligned with the final MetaDAO and legal structure
+
 
 ---
 

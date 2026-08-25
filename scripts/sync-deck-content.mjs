@@ -9,10 +9,12 @@ const source = fs.readFileSync(sourcePath, 'utf8');
 
 function inlineMarkdown(text) {
   return text
+    .replace(/\\([~*_])/g, '$1')
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>');
 }
 
 function parseSlides(markdown, headingPattern) {
@@ -27,7 +29,19 @@ function parseSlides(markdown, headingPattern) {
       continue;
     }
     const bullet = line.match(/^\s*\*\s+(.+)/);
-    if (bullet && current) current.bullets.push(bullet[1].trim());
+    if (bullet && current) {
+      current.bullets.push(bullet[1].trim());
+      continue;
+    }
+    const paragraph = line.trim();
+    if (
+      current &&
+      paragraph &&
+      !paragraph.startsWith('#') &&
+      !/^---+$/.test(paragraph)
+    ) {
+      current.bullets.push(paragraph);
+    }
   }
   return slides;
 }
@@ -35,7 +49,7 @@ function parseSlides(markdown, headingPattern) {
 const appendixStart = source.indexOf('# **Appendix**');
 const mainSource = source.slice(0, appendixStart);
 const appendixSource = source.slice(appendixStart);
-const mainSlides = parseSlides(mainSource, /^###\s+\*\*Slide \d+:\s*(.+?)\*\*\s*$/);
+const mainSlides = parseSlides(mainSource, /^#{2,3}\s+\*\*Slide \d+:\s*(.+?)\*\*\s*$/);
 const appendixSlides = parseSlides(appendixSource, /^##\s+\*\*A\d+:\s*(.+?)\*\*\s*$/);
 
 if (mainSlides.length !== 12 || appendixSlides.length !== 18) {
@@ -60,7 +74,8 @@ function replaceSlideCopy(html, slides) {
 function renderArrowFlows(html) {
   return html.replace(
     /<li class="reveal">([^<]*?)<strong>([^<]*→[^<]*)<\/strong><\/li>/g,
-    (_match, _intro, sequence) => {
+    (match, _intro, sequence) => {
+      if (/[,.]/.test(sequence)) return match;
       const steps = sequence
         .split('→')
         .map((step) => step.trim())
