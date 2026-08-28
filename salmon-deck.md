@@ -54,7 +54,7 @@
 
 ## **Slide 7: Salmon Has Already Absorbed the Initial Build Risk**
 
-* Salmon launched in 2023 and is live across extension, web wallet, Android, iOS, and a public repository
+* Salmon launched in 2022 and is live across extension, web wallet, Android, iOS, and a public repository
 * The team has completed launch, relaunch, and a deep technical refactor; Salmon also operates an active Solana validator
 * Current adoption is still early — the raise funds the next test: whether Powerups and selected integrations can create repeatable usage
 
@@ -180,7 +180,7 @@
 
 ## **A8: Product Status**
 
-* Salmon launched in **2023**
+* Salmon launched in **2022**
 * Salmon is live across **browser extension, web wallet, Android, iOS, and public repository**
 * The team has completed launch, relaunch, and deep technical refactor
 * Salmon operates an **active Solana validator**

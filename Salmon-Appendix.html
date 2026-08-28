@@ -130,31 +130,12 @@
             transform: translateY(30px);
             transition: opacity var(--duration-normal) var(--ease-out-expo),
                 transform var(--duration-normal) var(--ease-out-expo);
+            transition-delay: calc(var(--reveal-order, 0) * 0.1s);
         }
 
         .slide.active .reveal {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        .reveal:nth-child(1) {
-            transition-delay: 0.1s;
-        }
-
-        .reveal:nth-child(2) {
-            transition-delay: 0.2s;
-        }
-
-        .reveal:nth-child(3) {
-            transition-delay: 0.3s;
-        }
-
-        .reveal:nth-child(4) {
-            transition-delay: 0.4s;
-        }
-
-        .reveal:nth-child(5) {
-            transition-delay: 0.5s;
         }
 
         /* ===========================================
@@ -995,7 +976,7 @@
             <div class="slide-content">
                 <h2 class="reveal">Product Status</h2>
                 <ul class="bullet-list">
-                    <li class="reveal">Salmon launched in <strong>2023</strong></li>
+                    <li class="reveal">Salmon launched in <strong>2022</strong></li>
                     <li class="reveal">Salmon is live across <strong>browser extension, web wallet, Android, iOS, and public repository</strong></li>
                     <li class="reveal">The team has completed launch, relaunch, and deep technical refactor</li>
                     <li class="reveal">Salmon operates an <strong>active Solana validator</strong></li>
@@ -1489,6 +1470,12 @@
             }
 
             init() {
+                this.slides.forEach(slide => {
+                    slide.querySelectorAll('.reveal').forEach((element, index) => {
+                        element.style.setProperty('--reveal-order', index + 1);
+                    });
+                });
+
                 this.slides.forEach((_, i) => {
                     const dot = document.createElement('div');
                     dot.classList.add('dot');
