@@ -52,8 +52,8 @@ const appendixSource = source.slice(appendixStart);
 const mainSlides = parseSlides(mainSource, /^#{2,3}\s+\*\*Slide \d+:\s*(.+?)\*\*\s*$/);
 const appendixSlides = parseSlides(appendixSource, /^##\s+\*\*A\d+:\s*(.+?)\*\*\s*$/);
 
-if (mainSlides.length !== 12 || appendixSlides.length !== 18) {
-  throw new Error(`Expected 12 main and 18 appendix slides; got ${mainSlides.length} and ${appendixSlides.length}`);
+if (mainSlides.length !== 13 || appendixSlides.length !== 18) {
+  throw new Error(`Expected 13 main and 18 appendix slides; got ${mainSlides.length} and ${appendixSlides.length}`);
 }
 
 function replaceSlideCopy(html, slides) {
@@ -87,15 +87,14 @@ function renderArrowFlows(html) {
   );
 }
 
+// The main deck uses bespoke data visualizations and asymmetric layouts.
+// Keep its HTML hand-authored so a text sync cannot flatten those structures.
 const mainPath = path.join(root, 'index.html');
-let mainHtml = fs.readFileSync(mainPath, 'utf8');
-mainHtml = replaceSlideCopy(mainHtml, mainSlides);
-mainHtml = renderArrowFlows(mainHtml);
-mainHtml = mainHtml
-  .replace('<p style="padding-top: 10px;">Open Wallet Infrastructure</p>', '<p style="padding-top: 10px;">Integrations into distribution</p>')
-  .replace('Salmon Wallet — Community-Owned Wallet Deck', 'Salmon Wallet — Investor Deck')
-  .replace('Salmon is the community-owned wallet infrastructure. Discover how we\'re building the future of decentralized wallet layers.', 'Salmon turns selected integrations into activation, usage, and measurable distribution.');
-fs.writeFileSync(mainPath, mainHtml);
+const mainHtml = fs.readFileSync(mainPath, 'utf8');
+const mainSectionCount = (mainHtml.match(/<section class="slide/g) || []).length;
+if (mainSectionCount !== mainSlides.length) {
+  throw new Error(`Main HTML has ${mainSectionCount} slides; markdown has ${mainSlides.length}`);
+}
 
 const appendixPath = path.join(root, 'Salmon-Appendix.html');
 let appendixHtml = fs.readFileSync(appendixPath, 'utf8');
@@ -134,4 +133,4 @@ const normalizedMarkdown = source
   .trimEnd() + '\n';
 fs.writeFileSync(path.join(root, 'salmon-deck.md'), normalizedMarkdown);
 
-console.log(`Synced ${mainSlides.length} main slides and ${appendixSlides.length} appendix slides from ${sourcePath}`);
+console.log(`Verified ${mainSlides.length} main slides and synced ${appendixSlides.length} appendix slides from ${sourcePath}`);
