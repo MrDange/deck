@@ -1,283 +1,346 @@
-# **Investor Deck**
+---
+title: Investor Deck Dange
+status: draft
+owner: Angel and Nacho
+reviewed:
+---
 
-## **Slide 1: Your Wallet Should Not Decide What You Need**
+This document contains Salmon's investor deck narrative and evaluation appendix for prospective contributors funding the project through Backable.
 
-* A lightweight, modular and open-source wallet built for Solana
-* The product is built; capital expands reach, attracts users and turns first use into regular wallet activity
+# Salmon — Investor Deck
 
-## **Slide 2: Wallets Keep Adding Services to One Experience**
+# Cover
 
-* Teams decide what to include
-* Users navigate options they may not understand, need or want
+**SALMON WALLET · INVESTOR DECK**
 
-## **Slide 3: A Wallet That Grows With Its Users**
+## Your wallet should not decide what you need
 
-* The core stays focused
-* Users discover and activate Powerups only when they become useful
+A lightweight, modular and open-source wallet built for Solana.
 
-## **Slide 4: The Product and Modular Architecture Are Already Built**
-
-* Available on Chrome, Android, iOS and Seeker
-* Solana Payment and Swap operate as Powerups
-* Salmon maintains public code and operates an active Solana validator
-
-## **Slide 5: Powerups Connect Personalization With Distribution**
-
-* A concrete need gives someone a reason to try Salmon
-* A project brings its service and community
-* A useful action creates the opportunity for regular wallet use
-
-## **Slide 6: A Growing Market With Room for a Clearer Wallet**
-
-* 741 million estimated crypto owners at the end of 2025
-* 40-70 million active users estimated by a16z
-* 20% growth in mobile wallet users during 2025
-* The sources use different measurements and do not represent users available to Salmon
-
-## **Slide 7: Initial Users and Expansion Paths**
-
-* Start with crypto users seeking a lighter and more configurable wallet
-* Expand through Powerup communities, people learning crypto services and users leaving centralized exchanges
-
-## **Slide 8: Each Service Can Contribute in a Different Way**
-
-* Fees, referrals and revenue-sharing agreements can generate revenue
-* A Powerup can also earn its place through user distribution
-* Net validator revenue attributable to Salmon contributes to the governed treasury
-
-## **Slide 9: The Next Stage Focuses on Adoption and Distribution**
-
-* Months 1-3: integrations, outreach and initial acquisition
-* Months 3-6: services in use, joint campaigns and onboarding improvements
-* Months 6-9: assess repeat visits, cross-service use, revenue, costs and channel contribution
-* Next stage: deepen the integrations and channels that demonstrate sustained value
-
-## **Slide 10: The Team That Built and Maintains Salmon**
-
-* Nacho Mileo: Product and Strategy, full-time
-* Angel Mazzarello: Operations, full-time
-* Luca Mazzarello: Head Developer, full-time
-* Dario Santos: Technology, part-time
-* Rodrigo Menendez: Legal and Governance, part-time
-
-## **Slide 11: Capital Funds Reach, Adoption and Evidence**
-
-* Raise range: $200,000-$450,000
-* 80% treasury and 20% liquidity
-* Monthly allowance: up to $20,000
-* Operating capacity: 8-18 months at the full allowance
-* Proposed window: November 12-18, 2026
-
-## **Slide 12: The Next Stage Must Answer Four Questions**
-
-* Which Powerups attract users?
-* Do users return to the wallet?
-* Do they use other services?
-* What does each integration contribute in revenue, cost and distribution?
-
-## **Slide 13: Salmon Has Moved Beyond Product Risk**
-
-* The wallet is live
-* The Powerup framework operates today
-* Initial services are integrated
-* The next test is repeatable distribution and regular use
+**The product is built. We’re ready to expand its reach.**
 
 ---
 
-# **Appendix**
+# Main Deck
 
-## **A1: Core Thesis**
+## 1. Salmon aims to win users with a wallet they configure themselves
 
-* Salmon builds **open wallet infrastructure**
-* The core wallet should remain **lightweight, reliable, and understandable**
-* Selected modular integrations expand what users can do without permanent feature accumulation
-* Partners need a credible path from integration to activation, feedback, usage, and traction
-* Salmon’s wedge is **turning selected integrations into measurable distribution**
+Salmon gives users control over the services their wallet includes.
 
----
+We are seeking **USD 200,000–450,000 through Backable** to expand the reach of an operational product.
 
-## **A2: Product Foundation**
+Capital will sustain the team and wallet operations while advancing integrations and user acquisition.
 
-* The wallet core focuses on **asset control, signing clarity, safety, and reliable interaction**
-* Salmon should avoid becoming a heavy financial super-app
-* Useful capabilities can be added as **modular integrations / Powerups**
-* Powerups should justify their place through real user value
-* Integrations can be improved, deprioritized, or removed without rebuilding the entire product
+## 2. Salmon combines a configurable experience with distribution and economic participation
 
----
+The thesis rests on three arguments:
 
-## **A3: Partner Wedge**
+- **Users choose:** they activate the services they understand and need.
+- **Projects contribute distribution:** their [[Glossary#Powerups|Powerups]] can bring communities and new users.
+- **Contributors participate:** the project’s economics and governance follow the applicable legal framework.
 
-* Salmon prioritizes partners whose integrations give users a concrete reason to use the wallet
-* Initial target groups include Solana-native applications, NFT communities, self-custody/security tools, infra products, and aligned builders
-* Selection depends on **strategic fit, user value, and adoption potential**
-* The goal is not to collect integrations, but to prove repeatable user behavior
-* Strategic density matters more than generic wallet volume
+Capital will bring this offering to more users and build evidence of recurring use.
 
----
+## 3. Wallets add services and pass their complexity on to users
 
-## **A4: Integration Application Pipeline**
+Teams decide which features to include and how to present them.
 
-* **Apply:** partner submits use case, users, scope, permissions, maintenance plan, and distribution hypothesis
-* **Qualify:** Salmon evaluates strategic fit, user value, technical feasibility, and product coherence
-* **Build:** Salmon and partner define ownership, milestones, dependencies, and implementation path
-* **Validate:** Salmon reviews security, UX, compatibility, permissions, and operational impact
-* **Launch & Measure:** approved integrations go live and are measured through activation, usage, retention, and feedback
+Every user receives a catalog that may exceed their needs and must learn to navigate options they may not understand or want to use.
 
----
+**Salmon lets each user decide how much their wallet needs to expand.**
 
-## **A5: Integration Evaluation Standards**
+## 4. Salmon lets users learn about and activate services when they become useful
 
-* **Security:** permissions, signing flows, dependencies, attack surface, and user risk
-* **User value:** clear problem solved for wallet users
-* **UX coherence:** fit with navigation, flows, and user comprehension
-* **Technical compatibility:** architecture, performance, and regression risk
-* **Maintainability and adoption potential:** ongoing support, partner commitment, usage potential, and return behavior
+Users start with a foundation for managing assets, sending and receiving funds, and authorizing transactions.
 
----
+Powerups add optional functionality. Users can discover them, understand their purpose, and activate them when they become relevant.
 
-## **A6: Integration Support Levels**
+**The wallet supports learning without imposing the entire catalog from the outset.**
 
-* **Experimental:** limited or controlled release to validate feasibility, UX, and demand
-* **Verified:** production-ready integration reviewed for security, UX, compatibility, and maintenance
-* **Featured:** high-value integration with stronger visibility, onboarding, or coordinated partner activation
-* Approval and promotion are **separate decisions**
-* Technical inclusion does not automatically mean endorsement or prominent placement
+## 5. The team already operates Salmon across four platforms
 
----
+**Chrome, Android, iOS, and [[Glossary#Seeker|Seeker]].**
 
-## **A7: Curation Today and Governance Evolution**
+The modular architecture supports these Powerups:
 
-* Today, Salmon is operated by the current team
-* The team owns integration curation and final production approval
-* The objective is **accountable curation, not permissionless production**
-* If the MetaDAO raise succeeds, the framework can evolve toward community-owned oversight
-* Governance can shape policies, mandates, priorities, budgets, and escalation without reviewing every pull request
+- **Solana Payment:** payments.
+- **Swap:** asset exchange.
+- **$SKR:** available in the Seeker version.
 
----
+Public code allows the product to be examined. Salmon also operates an active Solana [[Glossary#Validator|validator]].
 
-## **A8: Product Status**
+**The next stage expands the reach of an operational product.**
 
-* Salmon launched in **2022**
-* Salmon is live across **browser extension, Android, iOS, and public repository**
-* The team has completed launch, relaunch, and deep technical refactor
-* Salmon operates an **active Solana validator**
-* The next phase is reliability, modular integrations, distribution proof, and governance readiness
+## 6. Salmon gives users concrete reasons to try a new wallet
 
----
+The initial audience is crypto users seeking less complexity and more control over the services they use.
 
-## **A9: One Reliable Experience**
+Expansion includes:
 
-Users should be able to:
+- Communities arriving through a Powerup.
+- New users who want to learn how to use crypto services.
+- People seeking [[Glossary#Self-custody|self-custody]] beyond centralized exchanges.
 
-* Create or import a wallet
-* Receive funds
-* Send transactions safely
-* Understand and approve signing requests
-* Use the integration that brought them to Salmon
-* Return because the product remains useful and reliable
+**A clearer experience or a specific service can motivate the first trial. Everyday usefulness must give users a reason to return.**
 
----
+## 7. Powerups let projects distribute services and Salmon attract users and revenue
 
-## **A10: Raise Structure**
+A project integrates its service and tells its community they can use it through Salmon.
 
-* Target Raise: $450,000 gross
-* Approximately $360,000 is intended for operating capital after liquidity provision
-* Monthly operating budget: approximately $30,000
-* The raise funds Salmon's next 12-month execution phase
-* This phase is designed to strengthen the wallet core, establish the Powerup model, and generate measurable evidence of adoption, retention, and ecosystem pull
-* If demand exceeds the target, Salmon may selectively accept additional capital where it materially strengthens execution or runway efficiency
+The wallet receives users with a specific need and can introduce them to other services. Integrations can also generate revenue through shared fees or commercial agreements.
 
+Several projects have already expressed interest in integrating.
 
----
+**Each Powerup can contribute users, revenue, or both, depending on its offering and economic agreement.**
 
-## **A11: Monthly Operating Budget**
+## 8. Crypto growth expands the market Salmon aims to capture
 
-* **Team & Product:** 70%
-* **Infrastructure, Security & SaaS:** 10%
-* **Powerups & Integrations:** 7%
-* **Community & Distribution:** 7%
-* **Legal, Accounting & Governance:** 6%
-* **Total monthly operating budget:** $30,000
+**741 million crypto owners** at the end of 2025, representing **12.4% annual growth**, according to Crypto.com.
 
-The allocation is indicative and may vary between categories based on operating needs while remaining within the approved monthly budget.
+**20% growth in mobile wallet users** during 2025, according to a16z.
 
----
+These figures show category expansion. They do not represent Salmon’s active users or its directly addressable market.
 
-## **A12: Roadmap Detail**
+Sources: [Crypto.com — Crypto Market Sizing 2025](https://crypto.com/ca/research/crypto-market-sizing-report-2025), [a16z — State of Crypto 2025](https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/).
 
-* **Q4 2026 —** Powerup Foundation & First Releases: implement the Powerup framework, move the first core Powerups through testing and staged release, and begin measuring usage
-* **Q1 2027 —** Core Powerup Expansion: progressively release additional priority Powerups and iterate based on usage, technical performance, and feedback
-* **Q2 2027 —** Usage & Integration Validation: improve recurring usage, onboard selected ecosystem integrations, and measure partner-driven activity and early economic signals
-* **Q3 2027 —** Distribution Evidence & Scale Decisions: evaluate Powerups, integrations, transaction activity, fees, validator contribution, and early revenue to determine what deserves deeper investment
+## 9. Salmon connects services with revenue and a governed treasury
 
-**Each phase moves from controlled product execution toward measurable product, distribution, and economic evidence.**
+Each service can contribute differently:
 
----
+- Usage fees.
+- Commercial referrals.
+- Revenue sharing with Powerup creators.
+- Net revenue attributable to the validator.
 
-## **A13: Measurement Framework**
+Revenue attributable to Salmon will contribute to the project treasury.
 
-* **Wallet adoption:** active wallets, new active wallets, activation, return usage, and retained cohorts
-* **Powerup behavior:** discovery, installations, first use, repeat use, removals, rotation between Powerups, and wallet retention by Powerup cohort
-* **Partner funnel:** applications, qualified proposals, integrations started, integrations launched, and repeat partner demand
-* **Integration performance:** users arriving by integration, completed actions, repeat usage, partner feedback, maintenance status, and expansion requests
-* **Ecosystem pull:** partner referrals, contributor activity, demand for reusable integration tooling, and partner-driven adoption
-* **Economic signals:** transaction volume attributable to Powerups, fees generated, early revenue, and revenue per active wallet
+**Users configure their experience. Contributors participate in the project’s economics and governance under the approved terms.**
 
-**Salmon evaluates product progress through behavior-based, ecosystem, and economic metrics together, reducing dependence on any single measure that may be amplified or suppressed by short-term market conditions.**
+## 10. The team uses capital to expand distribution and evaluate recurring use
 
----
+The team brings more than a decade of experience working together.
 
-## **A14: GTM and Distribution Logic**
+**Full-time:**
 
-* Salmon grows first through **selected partner integrations**
-* Partner communities and existing use cases provide initial distribution
-* Builders and contributors improve credibility and implementation capacity
-* Public code, visible progress, and integration metrics support trust
-* Salmon avoids broad paid acquisition before proving repeatable activation and retention
+- Nacho Mileo, Product & Strategy.
+- Angel Mazzarello, Operations.
+- Luca Mazzarello, Head Developer.
+
+**Part-time:**
+
+- Dario Santos, Technology.
+- Rodrigo Menendez, Legal & Governance.
+
+Execution will follow this sequence:
+
+- **Months 1–3:** advance integrations and activate communications and acquisition.
+- **Months 3–6:** launch approved Powerups and coordinate campaigns with their creators.
+- **From month 6:** evaluate results and prioritize services and channels.
+
+We will collect data from the outset to answer: **What attracts users? Who returns? Which other services do they use? What does each integration contribute?**
+
+## 11. Salmon faces adoption challenges and changes in its operating environment
+
+Three risks frame the assessment:
+
+- **Adoption:** users must find sufficient reasons to choose Salmon over their usual wallets.
+- **Policies and regulation:** external changes may limit services on certain platforms or in certain countries.
+- **Market activity:** lower service usage may reduce revenue.
+
+The base operating budget does not depend on future service or validator revenue.
+
+## 12. Salmon invites contributors to fund its next stage through Backable
+
+**Proposed raise: USD 200,000–450,000.**
+
+**Monthly allowance: up to USD 20,000.**
+
+Eighty percent of accepted capital will go to the treasury and 20% to [[Glossary#Token|token]] liquidity. The initial treasury will cover **8–18 months** at the full allowance, excluding project revenue.
+
+Capital will sustain the team and wallet operations while enabling the prioritization of integrations and user acquisition.
+
+**Proposed window: November 12–18, 2026.**
+
+Salmon seeks contributors who will back an operational wallet and participate in the project’s next stage.
+
+**Salmon’s Backable page will provide the definitive terms and access to make contributions.**
 
 ---
 
-## **A15: Token and Governance Readiness**
+# Appendix — Information for Investor Evaluation
 
-* Proposed ownership coin: **SALMON**
-* No existing token or prior TGE is part of the proposed setup
-* No day-one airdrop or immediate team unlock is planned
-* Proposed team performance package: **5M SALMON**
-* The package is subject to an **18-month cliff, 3-month TWAP, and performance brackets at 2x / 4x / 8x / 16x / 32x**
-* Tranche allocation: **0.5M / 0.75M / 1M / 1.25M / 1.5M SALMON**
-* Higher performance brackets unlock progressively larger portions of the package
-* Governance and token language must remain aligned with the final MetaDAO and legal structure
+## A1. The monthly budget sustains the team and prioritizes adoption
 
+Salmon proposes an allowance of up to **USD 20,000 per month** to sustain the team and wallet operations while advancing integrations and user acquisition.
 
----
+The team will focus resources on each stage’s priorities, combining development and maintenance with communications and distribution efforts alongside integrated projects.
 
-## **A16: IP, Asset Readiness, and Disclosure Standards**
+The budget does not establish separate teams for every activity. It relies on the existing team and collaboration with Powerup creators.
 
-* Core assets should be capable of aligning with DAO governance if the raise succeeds
-* Priority assets include brand, domains, GitHub, release accounts, infrastructure accounts, validator-related rights, and contributor rights
-* Launch readiness requires identifying dependencies tied to individuals, vendors, or legacy entities
-* Material obligations should be disclosed before launch
-* The standard is **no hidden agreements, no unclear token promises, and no undisclosed asset restrictions**
+## A2. Accepted capital determines the duration of the initial operating budget
 
----
+| Accepted capital | Treasury: 80% | Liquidity: 20% | Months at USD 20,000 |
+| --- | ---: | ---: | ---: |
+| USD 200,000 | USD 160,000 | USD 40,000 | 8 |
+| USD 250,000 | USD 200,000 | USD 50,000 | 10 |
+| USD 300,000 | USD 240,000 | USD 60,000 | 12 |
+| USD 450,000 | USD 360,000 | USD 90,000 | 18 |
 
-## **A17: Team and Execution Model**
+Calculations exclude project revenue and assume full use of the allowance.
 
-* **Nacho Mileo:** product direction, roadmap prioritization, wallet UX, and partner coordination
-* **Angel Mazzarello:** operations, partnerships, use-of-funds discipline, and community accountability
-* **Dario Santos:** architecture, security, reliability, integrations, and engineering execution
-* **Rodrigo Menendez:** legal structure, IP readiness, contributor rights, disclosures, and governance preparation
-* The operating model is lean, clearly owned, and aligned with the planned burn
+Net project revenue may reduce treasury depletion. Spending above the allowance requires the applicable governance process.
 
----
+## A3. The Performance Package ties team tokens to time and performance
 
-## **A18: Prior Funding and Early Build Support**
+The team proposes **5,000,000 SALMON**, locked at launch, with no immediate unlock.
 
-* **Bootstrapped funding:** approximately **$80,000**
-* **Serum grant:** **$2,500**
-* **Eclipse grant:** **$40,000**
-* Prior resources helped absorb early product and technical risk
-* The current raise funds reliability, integrations, distribution proof, and governance readiness
+The proposal includes:
 
----
+- A minimum lock of **18 months**.
+- A **three-month time-weighted average price** measurement.
+- Thresholds relative to contributors’ entry price.
+
+| Threshold | Tokens in tranche |
+| --- | ---: |
+| 2x | 500,000 |
+| 4x | 750,000 |
+| 8x | 1,000,000 |
+| 16x | 1,250,000 |
+| 32x | 1,500,000 |
+| **Total** | **5,000,000** |
+
+The timeline runs independently of the operating budget.
+
+The exact start date, measurement mechanism, and tranche configuration must match Backable’s definitive terms.
+
+## A4. The definitive configuration establishes token allocations
+
+The reference proposal includes:
+
+| Allocation | SALMON |
+| --- | ---: |
+| Contributors | 10,000,000 |
+| Liquidity | 2,900,000 |
+| Performance Package | 5,000,000 |
+| **Proposed total supply** | **17,900,000** |
+
+These amounts require validation against Backable’s actual configuration.
+
+The **20% of capital allocated to liquidity** and the **number of tokens allocated to liquidity** are different quantities. They do not represent the same percentage.
+
+The definitive price, allocations, and conditions must be reviewed on the raise page.
+
+## A5. The legal structure connects assets and revenue with the project
+
+The proposed structure includes **Salmon S.P.**, a segregated portfolio of **Futarchy Governance SPC**, subject to the applicable agreements.
+
+Rights relating to the product and essential assets will be assigned or contractually linked to that structure. The code will retain its open-source licenses.
+
+The team will remain responsible for day-to-day operations. Decisions reserved for governance will follow the [[Glossary#Futarchy|futarchy]] process, which uses markets to compare the expected outcomes of different decisions.
+
+Net validator revenue attributable to Salmon will contribute to the treasury.
+
+Wording on economic participation and governance must match the approved agreements that are actually executed.
+
+## A6. Projects can contribute users as well as revenue
+
+A Powerup can justify its inclusion through the service it offers and the community it brings.
+
+The creator can promote the product and identify Salmon as a place to use it. Salmon can use that interaction to introduce users to the rest of the wallet.
+
+Evaluation will consider:
+
+- Users arriving through the integration.
+- Service activation and usage.
+- Return visits to the wallet.
+- Use of other services.
+- Associated revenue and costs.
+
+Availability may vary across platforms and countries. A project’s interest does not constitute a launched integration or demonstrated adoption.
+
+## A7. The roadmap builds evidence from actual activity
+
+**Months 1–3:** define integrations with interested projects and activate campaigns on X.
+
+**Months 3–6:** launch approved services, coordinate promotion, and improve discovery and onboarding.
+
+**Months 6–9:** conduct an initial assessment based on a sufficient period of use.
+
+The central questions will be:
+
+1. Which services and channels attract users?
+2. Do users return?
+3. Do they use other Salmon features?
+4. What does each integration contribute in distribution and revenue?
+
+Evidence will guide subsequent product, distribution, and funding decisions.
+
+## A8. The team combines operational commitment with shared experience
+
+| Team member | Responsibility | Commitment |
+| --- | --- | --- |
+| Nacho Mileo | Product & Strategy | Full-time |
+| Angel Mazzarello | Operations | Full-time |
+| Luca Mazzarello | Head Developer | Full-time |
+| Dario Santos | Technology | Part-time |
+| Rodrigo Menendez | Legal & Governance | Part-time |
+
+Professional profiles:
+
+- [Nacho Mileo](https://www.linkedin.com/in/nachomileo/?locale=en-US)
+- [Angel Mazzarello](https://www.linkedin.com/in/angel-mazzarello/?locale=en-US)
+- [Luca Mazzarello](https://www.linkedin.com/in/luca-mazzarello-6118251b8/?locale=us)
+- [Dario Santos](https://www.linkedin.com/in/dariohernansantos/?locale=us)
+- [Rodrigo Menendez](https://www.linkedin.com/in/rodrigo-men%C3%A9ndez-267a3620/?locale=us)
+
+## A9. Bootstrapped funding and grants supported Salmon’s development
+
+- **Bootstrapped funding:** approximately USD 80,000 in 2022.
+- **Serum:** USD 2,500 grant.
+- **Eclipse:** USD 40,000 grant.
+
+These resources supported product construction and development.
+
+The proposed funding will support the next stage of adoption and distribution.
+
+## A10. Public code and references allow investors to examine Salmon
+
+- [Chrome extension](https://chromewebstore.google.com/detail/salmon-wallet/ejbidfepgijlcgahbmbckmnaljagjoll)
+- [Android application](https://play.google.com/store/apps/details?id=io.salmonwallet.app)
+- [Public code](https://github.com/Salmon-HQ)
+- [Validator](https://www.validators.app/validators/SA1LFXr4os2P4VKGUyRv84uFfuUYgcQkFh2uA4SmRcr?locale=en&network=mainnet)
+- [X](https://x.com/salmonwallet)
+
+Before distributing the final version, these links will be checked and references for iOS, Seeker, and the raise page will be added.
+
+## A11. Sources illustrate market size without attributing users to Salmon
+
+**Crypto.com:** 741 million crypto owners at the end of 2025 and 12.4% annual growth.
+
+**a16z:** an estimate of 40–70 million active users and 20% growth in mobile wallet users during 2025.
+
+The sources use different methodologies and populations. Their figures must not be added together or directly converted into estimates of obtainable users or revenue.
+
+Sources: [Crypto.com](https://crypto.com/ca/research/crypto-market-sizing-report-2025), [a16z](https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/).
+
+## A12. Backable will provide the terms and facilitate contributions
+
+Salmon’s page will provide the proposal and effective participation terms.
+
+The configuration must reflect:
+
+- A raise of **USD 200,000–450,000**.
+- An allowance of up to **USD 20,000 per month**.
+- A proposed window of **November 12–18, 2026**.
+- Approved token allocations and Performance Package.
+- Conditions applicable at the close of the raise.
+
+Submission will require completion of the relevant disclosures and controls, including B1 covering prior arrangements, allocations, agreements, and risks.
+
+Contributors must use the official raise page to review the definitive conditions and make their contributions.
+
+## Related Material
+
+- [[Backable Proposal]]
+- [[Investor Deck]]
+- [[Strategic Launch Document]]

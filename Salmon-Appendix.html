@@ -200,6 +200,39 @@
             top: 0;
         }
 
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(.9rem, 1.45vw, 1.15rem);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: .8rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,.16);
+            text-align: left;
+        }
+
+        .data-table th {
+            color: var(--brand-salmon);
+            font-size: .75em;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .data-table td:not(:first-child),
+        .data-table th:not(:first-child) { text-align: right; }
+
+        .appendix-note {
+            margin-top: 1.25rem;
+            max-width: 900px;
+            color: rgba(255,255,255,.68);
+            font-size: clamp(.86rem, 1.2vw, 1rem);
+            line-height: 1.45;
+        }
+
+        .link-list a { color: var(--brand-salmon); text-underline-offset: .25rem; }
+
         #slide-10 .bullet-list,
         #slide-12 .bullet-list {
             gap: 0.9rem;
@@ -1456,6 +1489,142 @@
     </div>
 
     <script>
+        const appendixSlides = [
+            {
+                title: 'The monthly budget sustains the team and prioritizes adoption',
+                bullets: [
+                    'Allowance of up to <strong>USD 20,000 per month</strong>.',
+                    'Capital sustains the team and wallet operations while advancing integrations and user acquisition.',
+                    'The existing team will combine development and maintenance with communications and distribution alongside Powerup creators.'
+                ],
+                note: 'The budget does not establish separate teams for every activity.'
+            },
+            {
+                title: 'Accepted capital determines the initial operating runway',
+                table: {
+                    headers: ['Accepted capital', 'Treasury 80%', 'Liquidity 20%', 'Months'],
+                    rows: [
+                        ['USD 200,000', 'USD 160,000', 'USD 40,000', '8'],
+                        ['USD 250,000', 'USD 200,000', 'USD 50,000', '10'],
+                        ['USD 300,000', 'USD 240,000', 'USD 60,000', '12'],
+                        ['USD 450,000', 'USD 360,000', 'USD 90,000', '18']
+                    ]
+                },
+                note: 'Calculations assume full use of the USD 20,000 allowance and exclude project revenue. Spending above the allowance requires the applicable governance process.'
+            },
+            {
+                title: 'The Performance Package ties team tokens to time and performance',
+                table: {
+                    headers: ['Threshold', 'Tokens in tranche'],
+                    rows: [['2x', '500,000'], ['4x', '750,000'], ['8x', '1,000,000'], ['16x', '1,250,000'], ['32x', '1,500,000'], ['Total', '5,000,000']]
+                },
+                note: 'The proposal includes a minimum 18-month lock and a three-month time-weighted average price measurement. Definitive terms control the start date, measurement mechanism and tranche configuration.'
+            },
+            {
+                title: 'The definitive configuration establishes token allocations',
+                table: {
+                    headers: ['Allocation', 'SALMON'],
+                    rows: [['Contributors', '10,000,000'], ['Liquidity', '2,900,000'], ['Performance Package', '5,000,000'], ['Proposed total supply', '17,900,000']]
+                },
+                note: 'These amounts require validation against Backable’s actual configuration. The 20% of capital allocated to liquidity and the number of tokens allocated to liquidity are different quantities.'
+            },
+            {
+                title: 'The legal structure connects assets and revenue with the project',
+                bullets: [
+                    'The proposed structure includes <strong>Salmon S.P.</strong>, a segregated portfolio of Futarchy Governance SPC.',
+                    'Product rights and essential assets will be assigned or contractually linked to that structure while code retains its open-source licenses.',
+                    'The team remains responsible for daily operations. Reserved decisions follow the applicable futarchy process.',
+                    'Net validator revenue attributable to Salmon contributes to the treasury.'
+                ],
+                note: 'Economic participation and governance language must match the agreements that are actually executed.'
+            },
+            {
+                title: 'Projects can contribute users as well as revenue',
+                bullets: [
+                    'A Powerup can justify inclusion through the service it offers and the community it brings.',
+                    'Evaluation covers arriving users, activation, repeat visits, use of other services, associated revenue and costs.',
+                    'Availability may vary across platforms and countries.'
+                ],
+                note: 'A project’s interest does not constitute a launched integration or demonstrated adoption.'
+            },
+            {
+                title: 'The roadmap builds evidence from actual activity',
+                bullets: [
+                    '<strong>Months 1–3:</strong> define integrations and activate campaigns on X.',
+                    '<strong>Months 3–6:</strong> launch approved services, coordinate promotion and improve discovery and onboarding.',
+                    '<strong>Months 6–9:</strong> assess recurring use after a sufficient period of activity.',
+                    'Evidence will guide subsequent product, distribution and funding decisions.'
+                ],
+                note: 'Core questions: which services attract users, who returns, whether users adopt other features, and what each integration contributes.'
+            },
+            {
+                title: 'The team combines operational commitment with shared experience',
+                table: {
+                    headers: ['Team member', 'Responsibility', 'Commitment'],
+                    rows: [
+                        ['Nacho Mileo', 'Product & Strategy', 'Full-time'],
+                        ['Angel Mazzarello', 'Operations', 'Full-time'],
+                        ['Luca Mazzarello', 'Head Developer', 'Full-time'],
+                        ['Dario Santos', 'Technology', 'Part-time'],
+                        ['Rodrigo Menendez', 'Legal & Governance', 'Part-time']
+                    ]
+                }
+            },
+            {
+                title: 'Bootstrapped funding and grants supported Salmon’s development',
+                bullets: [
+                    '<strong>Bootstrapped funding:</strong> approximately USD 80,000 in 2022.',
+                    '<strong>Serum:</strong> USD 2,500 grant.',
+                    '<strong>Eclipse:</strong> USD 40,000 grant.',
+                    'The proposed funding supports the next stage of adoption and distribution.'
+                ]
+            },
+            {
+                title: 'Public code and references allow investors to examine Salmon',
+                bullets: [
+                    '<a href="https://chromewebstore.google.com/detail/salmon-wallet/ejbidfepgijlcgahbmbckmnaljagjoll">Chrome extension</a>',
+                    '<a href="https://play.google.com/store/apps/details?id=io.salmonwallet.app">Android application</a>',
+                    '<a href="https://github.com/Salmon-HQ">Public code</a>',
+                    '<a href="https://www.validators.app/validators/SA1LFXr4os2P4VKGUyRv84uFfuUYgcQkFh2uA4SmRcr?locale=en&network=mainnet">Validator</a>',
+                    '<a href="https://x.com/salmonwallet">X</a>'
+                ],
+                note: 'Before distribution, check these links and add references for iOS, Seeker and the raise page.'
+            },
+            {
+                title: 'Market sources illustrate category scale without attributing users to Salmon',
+                bullets: [
+                    '<strong>Crypto.com:</strong> 741 million crypto owners at the end of 2025 and 12.4% annual growth.',
+                    '<strong>a16z:</strong> an estimated 40–70 million active users and 20% growth in mobile wallet users during 2025.'
+                ],
+                note: 'The sources use different methodologies and populations. Their figures must not be added together or converted directly into obtainable users or revenue.'
+            },
+            {
+                title: 'Backable will provide the terms and facilitate contributions',
+                bullets: [
+                    '<strong>Raise:</strong> USD 200,000–450,000.',
+                    '<strong>Monthly allowance:</strong> up to USD 20,000.',
+                    '<strong>Proposed window:</strong> November 12–18, 2026.',
+                    'The configuration must reflect approved token allocations, the Performance Package and conditions effective at close.',
+                    'Contributors must use the official raise page to review the definitive terms and contribute.'
+                ],
+                note: 'Submission requires completion of the relevant disclosures and controls, including B1 covering prior arrangements, allocations, agreements and risks.'
+            }
+        ];
+
+        const footer = `<div class="slide-footer"><img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75" class="footer-icon" alt="Icon"><img src="https://www.salmonwallet.io/_next/image?url=%2Fimages%2Fapp-title.png&w=256&q=75" class="footer-text" alt="Salmon"></div>`;
+        const renderTable = table => `<table class="data-table reveal"><thead><tr>${table.headers.map(header => `<th>${header}</th>`).join('')}</tr></thead><tbody>${table.rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+        const renderBullets = (bullets, linkList = false) => `<ul class="bullet-list${linkList ? ' link-list' : ''}">${bullets.map(item => `<li class="reveal">${item}</li>`).join('')}</ul>`;
+        document.getElementById('presentation-wrapper').innerHTML = appendixSlides.map((slide, index) => `
+            <section class="slide${index === 0 ? ' active' : ''}" id="slide-${index + 1}">
+                <div class="slide-number">A${index + 1}</div>
+                <div class="slide-content">
+                    <h2 class="reveal">${slide.title}</h2>
+                    ${slide.table ? renderTable(slide.table) : renderBullets(slide.bullets, index === 9)}
+                    ${slide.note ? `<p class="appendix-note reveal">${slide.note}</p>` : ''}
+                    ${footer}
+                </div>
+            </section>`).join('');
+
         class SlidePresentation {
             constructor() {
                 this.wrapper = document.getElementById('presentation-wrapper');
